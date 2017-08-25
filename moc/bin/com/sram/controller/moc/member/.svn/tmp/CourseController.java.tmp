@@ -1,0 +1,438 @@
+package com.sram.controller.moc.member;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.core.task.TaskExecutor;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.sram.Filter;
+import com.sram.Filter.Operator;
+import com.sram.Message;
+import com.sram.Pageable;
+import com.sram.Principal;
+import com.sram.controller.moc.BaseController;
+import com.sram.entity.Course;
+import com.sram.entity.CourseChapter;
+import com.sram.entity.CourseLearn;
+import com.sram.entity.CourseLesson;
+import com.sram.entity.CourseLessonLearn;
+import com.sram.entity.CourseLessonLearn.Status;
+import com.sram.entity.CourseNote;
+import com.sram.entity.CourseReview;
+import com.sram.entity.CourseThread;
+import com.sram.entity.CourseThreadPost;
+import com.sram.entity.Member;
+import com.sram.entity.UploadFiles;
+import com.sram.service.CourseChapterService;
+import com.sram.service.CourseFavoriteService;
+import com.sram.service.CourseLearnService;
+import com.sram.service.CourseLessonLearnService;
+import com.sram.service.CourseLessonService;
+import com.sram.service.CourseNoteService;
+import com.sram.service.CourseReviewService;
+import com.sram.service.CourseService;
+import com.sram.service.CourseThreadPostService;
+import com.sram.service.CourseThreadService;
+import com.sram.service.StaticService;
+import com.sram.service.TeacherService;
+import com.sram.service.UploadFilesService;
+import com.sram.util.WebUtils;
+
+@Controller("mocMemberCourseController")
+@RequestMapping("/member/course")
+public class CourseController extends BaseController {
+	@Resource(name = "courseServiceImpl")
+	private CourseService courseService;
+	@Resource(name = "teacherServiceImpl")
+	private TeacherService teacherService;
+	@Resource(name = "courseNoteServiceImpl")
+	private CourseNoteService courseNoteService;
+	@Resource(name = "courseChapterServiceImpl")
+	private CourseChapterService courseChapterService;
+	@Resource(name = "uploadFilesServiceImpl")
+	private UploadFilesService uploadFilesService;
+	@Resource(name = "courseLessonServiceImpl")
+	private CourseLessonService courseLessonService;
+	@Resource(name = "courseThreadServiceImpl")
+	private CourseThreadService courseThreadService;
+	@Resource(name = "courseThreadPostServiceImpl")
+	private CourseThreadPostService courseThreadPostService;
+	@Resource(name = "courseReviewServiceImpl")
+	private CourseReviewService courseReviewService;
+	@Resource(name = "courseLearnServiceImpl")
+	private CourseLearnService courseLearnService;
+	@Resource(name = "courseLessonLearnServiceImpl")
+	private CourseLessonLearnService courseLessonLearnService;
+	@Resource(name = "staticServiceImpl")
+	private StaticService staticService;
+	@Resource(name = "taskExecutor")
+	private TaskExecutor taskExecutor;
+	@Resource(name = "courseFavoriteServiceImpl")
+	private CourseFavoriteService courseFavoriteService;
+
+	/**
+	 * 判断当前用户是否登录
+	 */
+	@RequestMapping(value = "/aleradyLogin")
+	@ResponseBody
+	public String aleradyLogin(ModelMap model, HttpServletRequest request) {
+		Principal principal = (Principal) request.getSession().getAttribute(
+				Member.PRINCIPAL_ATTRIBUTE_NAME);
+
+		String aleradyLogin = principal == null ? "no" : "ok";
+		String uuid = null;
+		if (aleradyLogin.equals("no")) {
+			uuid = UUID.randomUUID().toString();
+		}
+		return "{\"aleradyLogin\":\"" + aleradyLogin + "\",\"captchaId\":\""
+				+ uuid + "\"}";
+	}
+
+	/**
+	 * count,1--评论、2--问答
+	 */
+	@RequestMapping(value = "/getCount")
+	@ResponseBody
+	public Long getCount(int index, Long courseId) {
+		Filter filters = new Filter();
+		filters.setProperty("course");
+		filters.setValue(courseId);
+		filters.setOperator(Operator.eq);
+		if (index == 1) {
+			return courseReviewService.count(filters);
+		}
+		return courseThreadService.count(filters);
+	}
+
+	/**
+	 * 异步获取数据page,1--评论、2--问答,page是当前页码，3--是资料 每次都查询10条
+	 */
+	@RequestMapping(value = "/getInfo")
+	public String getInfo(int index, Pageable pageable, Long courseId,
+			ModelMap model) {
+		String pageStr = "";
+		if (index == 1) {
+			model.addAttribute("page",
+					courseReviewService.findPage(courseId, pageable));
+			pageStr = "/moc/course/reviewInfo";
+		} else if (index == 2) {
+			model.addAttribute(
+					"page",
+					courseThreadService.findPage(null, null, null, null, null,
+							courseId, pageable).getContent());
+			pageStr = "/moc/course/questionInfo";
+		} else if (index == 3) {
+			pageStr = "/moc/course/dataInfo";
+		}
+		return pageStr;
+	}
+
+	/**
+	 * 跳到学习页面
+	 */
+	@RequestMapping(value = "/toLearn")
+	public String toLearn(HttpServletRequest request, Long courseId,
+			ModelMap model) {
+		Course course = courseService.find(courseId);
+
+		// 获得当前登陆的用户Id
+		Principal principal = (Principal) request.getSession().getAttribute(
+				Member.PRINCIPAL_ATTRIBUTE_NAME);
+		Long memberId = principal.getId();
+		CourseLearn courseLearn = courseLearnService.findByCourseId(courseId,
+				memberId);
+
+		// 开始学习，向会员与课程关系表插入数据，已插入则不执行任何操作。
+		if (courseLearn == null) {
+			courseLearn = new CourseLearn();
+			Member member = new Member();
+			member.setId(memberId);
+			courseLearn.setMember(member);
+			courseLearn.setCourse(course);
+			courseLearn.setCreateDate(new Date());
+			courseLearn.setFinishLessonNum(0);
+			courseLearn.setStatus(com.sram.entity.CourseLearn.Status.learning);
+			courseLearnService.save(courseLearn);
+
+			// 开始学习后course实体学员人数增1
+			course.setStudentNum(course.getStudentNum() + 1);
+			courseService.update(course);
+			final Course tempCourse = course;
+			// 为了修改学员人数、最新学员，采用异步方式重新生成课程静态页面，
+			taskExecutor.execute(new Runnable() {
+				public void run() {
+
+					// 生成最新的静态页面
+					staticService.build(tempCourse);
+				}
+			});
+
+		}
+		Member member = getCurrentMember();
+		model.addAttribute("course", course);
+		model.addAttribute("member", member);
+		List<CourseChapter> chapters = courseChapterService
+				.findChaptersByCourse(courseId);
+		model.addAttribute("chapters", chapters);
+
+		model.addAttribute("teachers", teacherService.findListByCourse(course));
+
+		Long mediaId = courseLessonService.findFirstMediaId(courseId);
+		model.addAttribute("mediaId", mediaId);
+
+		return "/moc/course/learn";
+	}
+
+	/**
+	 * 跳到媒介播放页面
+	 */
+	@RequestMapping(value = "/toMedia")
+	public String toMedia(HttpServletRequest request, Long mediaId,
+			ModelMap model) {
+		UploadFiles uploadFiles = uploadFilesService.find(mediaId);
+		model.addAttribute("uploadFiles", uploadFiles);
+
+		return "/moc/course/media";
+	}
+
+	/**
+	 * 初始化卡片indexCard--所要初始化的卡片索引 1--笔记，2---问答
+	 */
+	@RequestMapping(value = "/cardInit")
+	public @ResponseBody
+	Object cardInit(Long lessonId, Integer indexCard, HttpServletRequest request) {
+		Principal principal = (Principal) request.getSession().getAttribute(
+				Member.PRINCIPAL_ATTRIBUTE_NAME);
+		if (indexCard == 1) {
+
+			// 获取用户在该课时的笔记
+			return courseNoteService.findNotes(principal.getId(), 0, null,
+					lessonId, null);
+		}
+
+		// 获取用该课时下的所有的thread
+		return courseThreadService.getThreads(null, lessonId, null, null);
+	}
+
+	/**
+	 * 保存问答题目
+	 */
+	@RequestMapping(value = "/saveThread")
+	public @ResponseBody
+	String saveThread(CourseThread courseThread, HttpServletRequest request) {
+		Principal principal = (Principal) request.getSession().getAttribute(
+				Member.PRINCIPAL_ATTRIBUTE_NAME);
+		Long memberId = principal.getId();
+		Member member = new Member();
+		member.setId(memberId);
+		courseThread.setMember(member);
+		courseThreadService.save(courseThread);
+		return "{\"id\":\"" + courseThread.getId() + "\"}";
+	}
+
+	/**
+	 * 保存问答回复
+	 */
+	@RequestMapping(value = "/savePost")
+	public @ResponseBody
+	String savePost(CourseThreadPost courseThreadPost,
+			HttpServletRequest request) {
+		Principal principal = (Principal) request.getSession().getAttribute(
+				Member.PRINCIPAL_ATTRIBUTE_NAME);
+		Long memberId = principal.getId();
+		Member member = new Member();
+		member.setId(memberId);
+		courseThreadPost.setMember(member);
+		courseThreadPostService.save(courseThreadPost);
+		return "{\"id\":\"" + courseThreadPost.getId() + "\"}";
+	}
+
+	/**
+	 * 查找该thread的post---及该thread的content
+	 */
+	@RequestMapping(value = "/getPosts")
+	public @ResponseBody
+	Object getPosts(Long threadId) {
+		String threadContent = courseThreadService.find(threadId).getContent();
+		if (threadContent == null) {
+			threadContent = "丢失";
+		}
+		Map<String, List<CourseThreadPost>> hehe = new HashMap<String, List<CourseThreadPost>>();
+		hehe.put(threadContent, courseThreadPostService.findPosts(threadId,
+				null, null, null, null));
+		return hehe;
+	}
+
+	/**
+	 * 保存评价
+	 */
+	@RequestMapping(value = "/saveReview")
+	public @ResponseBody
+	Message saveReview(CourseReview courseReview, HttpServletRequest request) {
+		Principal principal = (Principal) request.getSession().getAttribute(
+				Member.PRINCIPAL_ATTRIBUTE_NAME);
+		Long memberId = principal.getId();
+		Member member = new Member();
+		member.setId(memberId);
+		courseReview.setMember(member);
+		courseReviewService.save(courseReview);
+		return SUCCESS_MESSAGE;
+	}
+
+	/**
+	 * 保存笔记、更新笔记(若该课时下存在笔记)
+	 */
+	@RequestMapping(value = "/saveNote")
+	public @ResponseBody
+	Message saveNote(CourseNote courseNote, HttpServletRequest request) {
+		Principal principal = (Principal) request.getSession().getAttribute(
+				Member.PRINCIPAL_ATTRIBUTE_NAME);
+		Long memberId = principal.getId();
+		Member member = new Member();
+		member.setId(memberId);
+		courseNote.setMember(member);
+		if (courseNote.getId() != null) {
+			courseNoteService.update(courseNote);
+		} else {
+			courseNoteService.save(courseNote);
+		}
+		return SUCCESS_MESSAGE;
+	}
+
+	/**
+	 * lessonId/courseId 切换课时---根据课时id观看视频（获取该课时的视频uri）
+	 */
+	@RequestMapping(value = "/seeVideo", method = RequestMethod.GET)
+	public @ResponseBody
+	String seeVideo(HttpServletRequest request, Long id) {
+		CourseLesson courseLesson = courseLessonService.find(id);
+		// 获得当前登陆的用户Id
+		Principal principal = (Principal) request.getSession().getAttribute(
+				Member.PRINCIPAL_ATTRIBUTE_NAME);
+		Long memberId = principal.getId();
+
+		// 查找登录用户学习课时的数据，没有找到时，持久化新的对象
+		CourseLessonLearn courseLessonLearn = courseLessonLearnService
+				.findByLessonId(courseLesson.getId(), memberId);
+		if (courseLessonLearn == null) {
+			courseLessonLearn = new CourseLessonLearn();
+			courseLessonLearn.setCourse(courseLesson.getCourse());
+			courseLessonLearn.setUserId(memberId);
+			courseLessonLearn.setCourseLesson(courseLesson);
+			courseLessonLearn
+					.setStatus(com.sram.entity.CourseLessonLearn.Status.learning);
+			courseLessonLearn.setCreateDate(new Date());
+			courseLessonLearnService.save(courseLessonLearn);
+		}
+		return "{\"mediaId\":\"" + courseLesson.getMediaId() + "\"}";
+	}
+
+	/**
+	 * 课时学习完成
+	 */
+	@RequestMapping(value = "/learnFinish", method = RequestMethod.GET)
+	public @ResponseBody
+	Message learnFinish(HttpServletRequest request, Long lessonId) {
+
+		// 获得当前登陆的用户Id
+		Principal principal = (Principal) request.getSession().getAttribute(
+				Member.PRINCIPAL_ATTRIBUTE_NAME);
+		Long memberId = principal.getId();
+
+		// 获得已完成学习课时实体对象
+		CourseLesson courseLesson = courseLessonService.find(lessonId);
+
+		// 查找登录用户学习课时的数据
+		CourseLessonLearn courseLessonLearn = courseLessonLearnService
+				.findByLessonId(lessonId, memberId);
+
+		// 重复学习不执行计数
+		if ((Status.learning).equals(courseLessonLearn.getStatus())) {
+			// 获得课程对象的总课时数
+			Course course = courseLesson.getCourse();
+
+			// 课时学习完成，CourseLearn中课时完成人数加1
+			CourseLearn courseLearn = courseLearnService.findByCourseId(
+					course.getId(), memberId);
+			courseLearn
+					.setFinishLessonNum(courseLearn.getFinishLessonNum() + 1);
+			courseLearnService.updateFinLessonNum(
+					courseLearn.getFinishLessonNum(), course.getId(), memberId);
+
+			// 课时完成学习，已学学员人数加1
+			courseLesson.setLearnedNum(courseLesson.getLearnedNum() + 1);
+
+			Integer allLessonCount = course.getLessonNum();
+
+			// 获得该完成课时所对应课程已完结的课时数
+			Integer finishCouLesCount = courseLessonLearnService
+					.findFinishCount(memberId, course.getId(), Status.finished);
+			if (allLessonCount.equals(finishCouLesCount)) {
+				courseLearnService.updateCourseLearn(memberId, course.getId(),
+						com.sram.entity.CourseLearn.Status.finished);
+				course.setFinishStuNum(course.getFinishStuNum() + 1);
+				courseService.updateFinishStuNum(course.getFinishStuNum(),
+						course.getId());
+			}
+			// 更新已学完学员人数字段
+			courseLessonService.updateLearnedNum(courseLesson);
+			// 课时完成后更新课程课时学习状态
+			courseLessonLearn
+					.setStatus(com.sram.entity.CourseLessonLearn.Status.finished);
+			courseLessonLearn.setModifyDate(new Date());
+			courseLessonLearnService.updateStatus(courseLessonLearn);
+		}
+		;
+
+		return Message.success("您已完成该课时的学习");
+	}
+
+	/**
+	 * 个人中心我的课程
+	 */
+	@RequestMapping(value = "/myCourseList", method = RequestMethod.GET)
+<<<<<<< .mine
+	public String myCourseList(HttpServletRequest request, ModelMap model,
+			String membTab) {
+		request.getSession().setAttribute("membTab", membTab);
+		// 获得当前登陆的用户Id
+		Principal principal = (Principal) request.getSession().getAttribute(
+				Member.PRINCIPAL_ATTRIBUTE_NAME);
+		Long memberId = principal.getId();
+		// 查询出该会员所有学完和未学完的课程
+		List<Object[]> courseList = courseService.findByMemberId(memberId);
+		// 查询该会员收藏的所有课程
+		List<Object[]> favCourseList = courseService
+				.findfavByMemberId(memberId);
+=======
+	public String myCourseList(HttpServletRequest request,ModelMap model,String membTab){
+		String username = WebUtils.getCookie(request, "username");
+		if (username == null) {
+			return "redirect:/login/index.jhtml";
+		}
+		request.getSession().setAttribute("membTab",membTab);
+		//获得当前登陆的用户Id
+		Principal principal=(Principal) request.getSession().getAttribute(Member.PRINCIPAL_ATTRIBUTE_NAME);
+		Long memberId=principal.getId();
+		//查询出该会员所有学完和未学完的课程
+		List<Object[]> courseList=courseService.findByMemberId(memberId);
+		//查询该会员收藏的所有课程
+		List<Object[]> favCourseList=courseService.findfavByMemberId(memberId);
+>>>>>>> .r1807
+		model.addAttribute("courseList", courseList);
+		model.addAttribute("favCourseList", favCourseList);
+		return "/moc/course/myCourseList";
+	}
+
+}

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/sram/!svn/ver/3267/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/setting
+END
+safeAndRegisterEdit.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/sram/!svn/ver/3267/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/setting/safeAndRegisterEdit.ftl
+END
+loginEdit.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/sram/!svn/ver/3267/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/setting/loginEdit.ftl
+END
+viewEdit.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/sram/!svn/ver/3267/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/setting/viewEdit.ftl
+END
+mail.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/sram/!svn/ver/3267/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/setting/mail.ftl
+END
+basicEdit.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/sram/!svn/ver/3267/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/setting/basicEdit.ftl
+END
+otherEdit.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/sram/!svn/ver/3267/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/setting/otherEdit.ftl
+END
+mailEdit.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/sram/!svn/ver/3267/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/setting/mailEdit.ftl
+END
+shareEdit.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/sram/!svn/ver/3267/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/setting/shareEdit.ftl
+END

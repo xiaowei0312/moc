@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/sram/!svn/ver/4362/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive
+END
+FlashMessageDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/FlashMessageDirective.java
+END
+CourseCategoryChildrenListDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/sram/!svn/ver/1424/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/CourseCategoryChildrenListDirective.java
+END
+CourseCategoryParentListDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/sram/!svn/ver/1424/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/CourseCategoryParentListDirective.java
+END
+TagListDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/TagListDirective.java
+END
+AdPositionDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/AdPositionDirective.java
+END
+BaseDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/BaseDirective.java
+END
+CurrentMemberDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/CurrentMemberDirective.java
+END
+IndustryCategoryListDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/sram/!svn/ver/3763/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/IndustryCategoryListDirective.java
+END
+ArticleListDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/ArticleListDirective.java
+END
+ArticleCategoryRootListDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/ArticleCategoryRootListDirective.java
+END
+ExecuteTimeDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/ExecuteTimeDirective.java
+END
+FriendLinkListDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/FriendLinkListDirective.java
+END
+ArticleCategoryChildrenListDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/ArticleCategoryChildrenListDirective.java
+END
+CourseRecommendListDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/sram/!svn/ver/2594/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/CourseRecommendListDirective.java
+END
+AccountCategoryListDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/sram/!svn/ver/4362/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/AccountCategoryListDirective.java
+END
+ArticleCategoryParentListDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/ArticleCategoryParentListDirective.java
+END
+PaginationDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/PaginationDirective.java
+END
+NavigationListDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/NavigationListDirective.java
+END
+CourseListDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/sram/!svn/ver/941/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/CourseListDirective.java
+END
+CourseCategoryRootListDirective.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/sram/!svn/ver/1664/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/template/directive/CourseCategoryRootListDirective.java
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/sram/!svn/ver/4706/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/moc/report
+END
+myExercise.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/sram/!svn/ver/4623/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/moc/report/myExercise.ftl
+END
+seeAnalysis.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/sram/!svn/ver/3742/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/moc/report/seeAnalysis.ftl
+END
+myCollection.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/sram/!svn/ver/4698/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/moc/report/myCollection.ftl
+END
+exerciselist.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/sram/!svn/ver/4630/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/moc/report/exerciselist.ftl
+END
+abilityReport.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/sram/!svn/ver/4706/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/moc/report/abilityReport.ftl
+END
+showError.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/sram/!svn/ver/4699/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/moc/report/showError.ftl
+END

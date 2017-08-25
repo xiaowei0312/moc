@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/sram/!svn/ver/39/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/admin
+END
+list.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/sram/!svn/ver/39/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/admin/list.ftl
+END
+edit.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/sram/!svn/ver/39/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/admin/edit.ftl
+END
+add.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/sram/!svn/ver/39/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/admin/add.ftl
+END

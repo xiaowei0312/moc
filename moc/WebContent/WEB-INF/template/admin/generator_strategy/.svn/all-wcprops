@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/sram/!svn/ver/4007/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/generator_strategy
+END
+addStrategy.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/sram/!svn/ver/4007/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/generator_strategy/addStrategy.ftl
+END
+list.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/sram/!svn/ver/3727/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/generator_strategy/list.ftl
+END
+editStrategy.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/sram/!svn/ver/3873/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/admin/generator_strategy/editStrategy.ftl
+END

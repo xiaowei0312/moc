@@ -1,0 +1,389 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/sram/!svn/ver/4775/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service
+END
+PaymentMethodService.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/PaymentMethodService.java
+END
+MailService.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/sram/!svn/ver/1461/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/MailService.java
+END
+MemberRankService.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/sram/!svn/ver/1655/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/MemberRankService.java
+END
+AdService.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/AdService.java
+END
+RSAService.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/RSAService.java
+END
+TestpaperItemResultService.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/sram/!svn/ver/4318/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/TestpaperItemResultService.java
+END
+StaticService.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/sram/!svn/ver/3782/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/StaticService.java
+END
+CourseThreadService.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/sram/!svn/ver/2666/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CourseThreadService.java
+END
+AdminService.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/AdminService.java
+END
+CourseCategoryService.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/sram/!svn/ver/1981/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CourseCategoryService.java
+END
+NavigationService.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/NavigationService.java
+END
+CaptchaService.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CaptchaService.java
+END
+TestpaperService.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/sram/!svn/ver/4345/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/TestpaperService.java
+END
+AdPositionService.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/AdPositionService.java
+END
+MemberImageService.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/sram/!svn/ver/2661/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/MemberImageService.java
+END
+BaseService.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/BaseService.java
+END
+TemplateService.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/TemplateService.java
+END
+IndustryCategoryService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/sram/!svn/ver/3878/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/IndustryCategoryService.java
+END
+ShippingMethodService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/ShippingMethodService.java
+END
+ArticleService.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/sram/!svn/ver/3679/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/ArticleService.java
+END
+MessageService.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/MessageService.java
+END
+TestpaperItemService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/sram/!svn/ver/2076/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/TestpaperItemService.java
+END
+OutlineCategoryMaterialService.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/sram/!svn/ver/3771/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/OutlineCategoryMaterialService.java
+END
+IntegralRuleService.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/sram/!svn/ver/4471/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/IntegralRuleService.java
+END
+CacheService.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CacheService.java
+END
+GeneratorQuestionConfigService.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/sram/!svn/ver/2101/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/GeneratorQuestionConfigService.java
+END
+SearchService.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/sram/!svn/ver/1429/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/SearchService.java
+END
+TestpaperResultService.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/sram/!svn/ver/4104/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/TestpaperResultService.java
+END
+CourseLessonLearnService.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/sram/!svn/ver/3474/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CourseLessonLearnService.java
+END
+DeliveryCorpService.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/DeliveryCorpService.java
+END
+MemberService.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/sram/!svn/ver/4775/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/MemberService.java
+END
+DepositService.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/DepositService.java
+END
+UploadFilesService.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/sram/!svn/ver/4153/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/UploadFilesService.java
+END
+AreaService.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/AreaService.java
+END
+AccoutCatalogService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/sram/!svn/ver/3989/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/AccoutCatalogService.java
+END
+OutlineCategoryService.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/sram/!svn/ver/4218/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/OutlineCategoryService.java
+END
+TeacherImageService.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/sram/!svn/ver/457/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/TeacherImageService.java
+END
+TestpaperChapterService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/sram/!svn/ver/3127/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/TestpaperChapterService.java
+END
+FileService.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/FileService.java
+END
+CourseMaterialService.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/sram/!svn/ver/3455/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CourseMaterialService.java
+END
+LogService.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/LogService.java
+END
+CourseLearnService.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/sram/!svn/ver/3686/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CourseLearnService.java
+END
+PluginConfigService.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/PluginConfigService.java
+END
+CourseLessonService.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/sram/!svn/ver/4034/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CourseLessonService.java
+END
+FriendLinkService.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/FriendLinkService.java
+END
+CourseThreadPostService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/sram/!svn/ver/2011/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CourseThreadPostService.java
+END
+CourseFavoriteService.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/sram/!svn/ver/3424/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CourseFavoriteService.java
+END
+CourseService.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/sram/!svn/ver/4244/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CourseService.java
+END
+RoleService.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/RoleService.java
+END
+CourseImageService.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/sram/!svn/ver/400/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CourseImageService.java
+END
+CourseChapterService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/sram/!svn/ver/4244/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CourseChapterService.java
+END
+LogConfigService.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/LogConfigService.java
+END
+TeacherService.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/sram/!svn/ver/2445/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/TeacherService.java
+END
+IntegralRuleTaskService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/sram/!svn/ver/4625/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/IntegralRuleTaskService.java
+END
+SnService.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/SnService.java
+END
+ArticleCategoryService.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/ArticleCategoryService.java
+END
+CourseReviewService.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/sram/!svn/ver/2084/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CourseReviewService.java
+END
+CourseNoteService.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/sram/!svn/ver/3342/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CourseNoteService.java
+END
+PluginService.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/PluginService.java
+END
+QuestionService.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/sram/!svn/ver/4217/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/QuestionService.java
+END
+QuestionFavoriteService.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/sram/!svn/ver/3871/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/QuestionFavoriteService.java
+END
+GeneratorStrategyService.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/sram/!svn/ver/3138/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/GeneratorStrategyService.java
+END
+TagService.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/TagService.java
+END
+CourseAnnouncementService.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/sram/!svn/ver/1178/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/service/CourseAnnouncementService.java
+END

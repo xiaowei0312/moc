@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sram>
+
+	<setting name="uploadMaxSize" value="1000" />
+	<setting name="uploadImageExtension" value="jpg,jpeg,bmp,gif,png" />
+	<setting name="uploadFlashExtension" value="swf,flv" />
+	<setting name="uploadVideoExtension" value="flv,avi,wmv,mp4,mov" />
+	<setting name="uploadAudioExtension" value="mp3" />
+	<setting name="uploadFileExtension" value="zip,rar,7z,doc,docx,xls,xlsx,ppt,pptx" />
+	<setting name="uploadPPTExtension" value="ppt,pptx" />
+	
+	<setting name="imageUploadPath" value="/upload/image/${.now?string('yyyyMM')}/" />
+	<setting name="flashUploadPath" value="/upload/flash/${.now?string('yyyyMM')}/" />
+	<setting name="mediaUploadPath" value="/upload/media/${.now?string('yyyyMM')}/" />
+	<setting name="fileUploadPath" value="/upload/file/${.now?string('yyyyMM')}/" />
+	
+	
+	<setting name="storagePath" value="D:\document\projects\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\storage\data" />
+
+
+</sram>

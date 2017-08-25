@@ -1,0 +1,62 @@
+<script type="text/javascript">
+    $().ready(function() {
+        var $headerLogin = $("#headerLogin");
+	    var $headerRegister = $("#headerRegister");
+	    var $headerUsername = $("#headerUsername");
+	    var $headerLogout = $("#headerLogout");
+	    
+	    var username = getCookie("username");
+
+	    if (username != null) {
+		    $headerUsername.text(username+"").show();
+		    $headerLogout.show();
+		    $headerLogin.hide();
+		    $headerRegister.hide();
+	    } else {	
+		    $headerLogin.show();
+		    $headerRegister.show();
+	    }
+    });
+    $(document).ready(function(){  
+    $(".nav a").each(function(){  
+        $this = $(this);  
+        if($this[0].href==String(window.location)){  
+            $this.addClass("link1 current");  
+        }  
+    });  
+});  
+</script>
+<div class="head" id="fixed">
+	<div class="nav">
+
+    	<span class="navimg"><a href="${base}/"><img border="0" src="${base}/resources/moc/images/logo.png"></a></span>
+
+        <ul class="nag">
+
+        	<li><a href="${base}/moc/course/list.jhtml" class="link1 current">课程</a></li>
+        	<li><a href="articlelist.html" class="link1">资讯</a></li>
+            <li><a href="teacher.html" class="link1">讲师</a></li>
+            <li><a href="${base}/question/industry.jhtml" class="link1" target="_blank">题库</a></li>
+            <li><a href="${base}/courseThread/questionList.jhtml?tabFlag=newestThread" class="link1" target="_blank">问答</a></li>
+<<<<<<< .mine
+            [@navigation_list position = "top"]
+				[#list navigations as navigation]
+					<li>
+						<a href="${navigation.url}"[#if navigation.isBlankTarget] class="link1" target="_blank"[/#if]>${navigation.name}</a>
+						[#if navigation_has_next]|[/#if]
+					</li>
+				[/#list]
+			[/@navigation_list]
+=======
+
+>>>>>>> .r2163
+        </ul>
+        <span class="massage">
+           <a href="${base}/logout/logout.jhtml"  class="link2 he" id="headerLogout" style="display:none;">[退出]</a>
+           <a id="headerUsername" style="display:none;" class="link2 he" style="width:60px;"></a>
+        	<a id="headerLogin"  href="${base}/login/index.jhtml" class="link2 he">登录</a>
+            <a id="headerRegister"  href="${base}/register/index.jhtml" class="link2 he">注册</a>
+          <a href="${base}/member/course/myCourseList.jhtml?membTab=tab1" style="width:70px" class="link2 he ico" target="_blank">个人中心</a>
+        </span>
+    </div>
+</div>

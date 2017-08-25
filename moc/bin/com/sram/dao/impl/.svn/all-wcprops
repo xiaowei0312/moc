@@ -1,0 +1,311 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/sram/!svn/ver/4777/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl
+END
+CourseCategoryDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/sram/!svn/ver/3764/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/CourseCategoryDaoImpl.java
+END
+CourseThreadPostDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/sram/!svn/ver/2034/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/CourseThreadPostDaoImpl.java
+END
+NavigationDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/NavigationDaoImpl.java
+END
+CourseDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/sram/!svn/ver/4244/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/CourseDaoImpl.java
+END
+CourseFavoriteDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/sram/!svn/ver/3424/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/CourseFavoriteDaoImpl.java
+END
+RoleDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/RoleDaoImpl.java
+END
+TestpaperDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/sram/!svn/ver/4488/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/TestpaperDaoImpl.java
+END
+CourseChapterDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/sram/!svn/ver/4218/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/CourseChapterDaoImpl.java
+END
+AdPositionDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/AdPositionDaoImpl.java
+END
+BaseDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/sram/!svn/ver/3805/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/BaseDaoImpl.java
+END
+TeacherDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/sram/!svn/ver/2445/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/TeacherDaoImpl.java
+END
+IndustryCategoryDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/sram/!svn/ver/3899/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/IndustryCategoryDaoImpl.java
+END
+SnDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/SnDaoImpl.java
+END
+IntegralRuleTaskDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/sram/!svn/ver/4762/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/IntegralRuleTaskDaoImpl.java
+END
+ArticleCategoryDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/ArticleCategoryDaoImpl.java
+END
+CourseReviewDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/sram/!svn/ver/3365/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/CourseReviewDaoImpl.java
+END
+ShippingMethodDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/ShippingMethodDaoImpl.java
+END
+ArticleDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/sram/!svn/ver/3679/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/ArticleDaoImpl.java
+END
+MessageDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/MessageDaoImpl.java
+END
+CourseNoteDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/sram/!svn/ver/3365/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/CourseNoteDaoImpl.java
+END
+TestpaperItemDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/sram/!svn/ver/4311/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/TestpaperItemDaoImpl.java
+END
+OutlineCategoryMaterialDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/sram/!svn/ver/4185/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/OutlineCategoryMaterialDaoImpl.java
+END
+IntegralRuleDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/sram/!svn/ver/4714/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/IntegralRuleDaoImpl.java
+END
+GeneratorQuestionConfigDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/sram/!svn/ver/2101/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/GeneratorQuestionConfigDaoImpl.java
+END
+TestpaperResultDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/sram/!svn/ver/4631/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/TestpaperResultDaoImpl.java
+END
+CourseLessonLearnDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/sram/!svn/ver/3799/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/CourseLessonLearnDaoImpl.java
+END
+QuestionDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/sram/!svn/ver/4554/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/QuestionDaoImpl.java
+END
+UploadFilesDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/sram/!svn/ver/4185/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/UploadFilesDaoImpl.java
+END
+DeliveryCorpDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/DeliveryCorpDaoImpl.java
+END
+DepositDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/DepositDaoImpl.java
+END
+MemberDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/sram/!svn/ver/4777/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/MemberDaoImpl.java
+END
+QuestionFavoriteDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/sram/!svn/ver/3871/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/QuestionFavoriteDaoImpl.java
+END
+AreaDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/AreaDaoImpl.java
+END
+AccoutCatalogDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/sram/!svn/ver/3989/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/AccoutCatalogDaoImpl.java
+END
+GeneratorStrategyDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/sram/!svn/ver/3596/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/GeneratorStrategyDaoImpl.java
+END
+TagDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/TagDaoImpl.java
+END
+CourseAnnouncementDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/sram/!svn/ver/1183/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/CourseAnnouncementDaoImpl.java
+END
+OutlineCategoryDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/sram/!svn/ver/4218/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/OutlineCategoryDaoImpl.java
+END
+TestpaperChapterDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/sram/!svn/ver/3210/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/TestpaperChapterDaoImpl.java
+END
+PaymentMethodDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/PaymentMethodDaoImpl.java
+END
+CourseMaterialDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/sram/!svn/ver/3455/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/CourseMaterialDaoImpl.java
+END
+LogDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/LogDaoImpl.java
+END
+CourseLearnDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/sram/!svn/ver/3695/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/CourseLearnDaoImpl.java
+END
+MemberRankDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/sram/!svn/ver/1429/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/MemberRankDaoImpl.java
+END
+PluginConfigDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/PluginConfigDaoImpl.java
+END
+CourseLessonDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/sram/!svn/ver/4075/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/CourseLessonDaoImpl.java
+END
+AdDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/AdDaoImpl.java
+END
+FriendLinkDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/FriendLinkDaoImpl.java
+END
+TestpaperItemResultDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/sram/!svn/ver/4556/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/TestpaperItemResultDaoImpl.java
+END
+CourseThreadDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/sram/!svn/ver/3762/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/CourseThreadDaoImpl.java
+END
+AdminDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/sram/!svn/ver/165/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/src/com/sram/dao/impl/AdminDaoImpl.java
+END

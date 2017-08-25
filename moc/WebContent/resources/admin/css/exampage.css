@@ -1,0 +1,66 @@
+*{margin:0; padding:0}
+.clearh { clear:both}
+.exampaper { width:100%; margin:0 auto; position:relative}
+.exampleft { width:60%; float:left; min-height:200px; height:800px; }
+.examplbox { width:100%; border:1px solid #e6f0f9; overflow:scroll;padding-right:10px; overflow-x:hidden }
+.exampright { width:38%;min-height:200px; float:right}
+.examtitle { display:block; height:30px; line-height:30x; border-top: solid 1px #d8deea;
+border-right: solid 1px #c6c9ca;
+border-bottom: solid 1px #c6c9ca;
+background: url(../images/list.gif) 0px -60px #f2f4f6 no-repeat;  padding-left:10px;
+position:relative; width:100%}
+.examtitle span { display:block; height:20px; width:560px; padding-top:5px;font-size:16px; color:#5b5b5b;}
+.shrink { position:absolute; right:10px; display:block; width:20px; height:24px; line-height:24px; top:0px; font-size:20px; font-weight:bold; cursor:pointer; text-align:right}
+.examleftItem { width:100%; padding-top:10px; padding-bottom:10px; padding-left:10px; font-size:12px; color:#666666; border-bottom:1px solid #e6f0f9; position:relative}
+.examleftItem p { line-height:25px; width:100%}
+.examleftItem b { font-weight:normal}
+.Lexamnum { display:inline-block; width:20%; padding-right:10px;}
+.score { display:inline-block; width:20%; padding-right:10px;}
+.examleftItem input { width:40%}
+.examedit { float:right; display:inline-block; line-height:24px; margin-right:10px; width:35%}
+.optiontable { width:100%; border:1px solid #e6f0f9; overflow:scroll}
+.optiontable th {height:30px; line-height:30x; border-top: solid 1px #d8deea;
+border-bottom: solid 1px #c6c9ca;
+background: url(../images/list.gif) 0px -60px #f2f4f6 no-repeat;color:#5b5b5b; font-weight:normal}
+.optiontable td {font-size:12px; color:#666666; height:30px; line-height:30px; border-bottom:1px solid #e6f0f9; text-align:center}
+.examinput { margin-bottom:5px;}
+.examinput input { width:20%;}
+.examinput select { width:30%;}
+.selbtn { display:inline-block; height:20px; line-height:20px; width:40px; text-align:center;text-shadow: 1px 1px #ffffff;
+-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+border: 1px solid #b7c8d9;
+background: url(../images/common.gif) 0px 0px repeat-x;
+font-size:12px
+}
+.selbtn:link,.selbtn:visited {color:#444444; text-decoration:none}
+.selbtn:hover { background:#b7c8d9; }
+.eLeftTile { text-align:center; height:40px; line-height:40px; color:#222222; width:100%}
+.Leftmassage {font-size:14px; color:#666666;line-height:27px;}
+.Leftmassage b { display:inline-block; width:30%}
+.Leftmassage.l1 b { padding-top:10px;padding-left:10px }
+.Leftmassage.l2 b { padding-bottom:10px; padding-left:10px}
+.Leftmassage.l2 b.Lb1 {}
+.Leftmassage.l2 b.Lb2 { float:right;} 
+.clearh { clear:both}
+.examtime { border:1px solid #e6f0f9;  margin-bottom:5px; padding-left:20px; padding-right:20px;}
+.exambtn { height:100px; line-height:100px; width:101%; text-align:center;border: 1px solid #e6f0f9; margin-top:5px}
+.exambtn a { display:inline-block; height:25px; line-height:25px; width:50px; text-align:center;background: url(../images/common.gif) 0px 0px repeat-x; color:#666}
+.exambtn a:link,.exambtn a:visited {color:#444444; text-decoration:none}
+.exambtn a:hover { background:#b7c8d9; }
+
+.tr_of_question { cursor:pointer}
+.td_of_question { position:relative}
+.popbox {height:100px; width:300px;overflow:scroll; padding:10px; background:#F0F0F0; border:solid 1px #c6c9ca; font-size:12px;color:#444444; position:absolute; left:10px;z-index:4; display:none; text-align:left }
+.popbox.ub { width:300px; left:10px}
+.popbox p{ line-height:20px}
+.popboxub {height:100px;overflow:scroll; margin-left:50px; padding:10px; background:#F0F0F0; border:solid 1px #c6c9ca; font-size:12px;color:#444444; position:absolute;z-index:4; display:none; text-align:left; width:200px;}
+.popboxub b { font-weight:bold;display:block; padding-top:10px; padding-bottom:10px;}
+.popboxub p { line-height:20px;}
+.examleftchild { padding-left:20px; padding-top:10px; padding-bottom:10px; background:#EEE; display:none}
+.elclild { padding-bottom:10px;}
+
+.question_childrens{ display:none;}
+.children_stem{ display:none;}
+.children_popbox{ display:none;}

@@ -1,0 +1,2669 @@
+﻿@charset "utf-8";
+/* CSS Document 题库*/
+/***************公共样式*****************/
+* {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑"
+}
+
+textarea {
+	resize: none
+}
+
+.select {
+	position: relative;
+	margin-bottom: 10px;
+	display: block;
+	width: 230px;
+	height: 29px;
+	float: left
+}
+
+.select input {
+	width: 190px;
+	height: 25px;
+	line-height: 25px;
+	border: 2px solid #FA5C53;
+	border-radius: 3px;
+	color: #666
+}
+
+.sellink {
+	display: block;
+	width: 35px;
+	height: 29px;
+	background: #DBDBDB;
+	border-radius: 0 3px 3px 0;
+	position: absolute;
+	top: 0;
+	right: 0px;
+	background: url(../images/ico_detail_item.png) -6px -2065px no-repeat #FA5C53
+}
+
+.sort {
+	position: absolute;
+	top: 0;
+	left: -48px;
+	z-index: 11;
+	width: 45px;
+	height: 29px;
+	background: url(../images/ico_detail_item.png) -35px -810px no-repeat #FA5C53;
+	padding-left: 5px;
+	line-height: 29px;
+	border-radius: 3px 0 0 3px;
+}
+
+.sort:link,.sort:visited {
+	color: #fff;
+	text-decoration: none
+}
+
+.sort:hover {
+	background: url(../images/ico_detail_item.png) -35px -810px no-repeat #FF8080
+}
+
+.sortext {
+	display: none;
+	width: 100px;
+	height: 75px;
+	border: 2px solid #FA5C53;
+	background: #fff;
+	position: absolute;
+	left: -45px;
+	top: 29px;
+}
+
+.sortext p {
+	color: #FA5C53;
+	padding-left: 20px;
+	height: 25px;
+	line-height: 25px;
+	cursor: pointer
+}
+
+.sortext p:hover {
+	background: #FFCECE
+}
+
+.select input {
+	padding-left: 5px;
+}
+
+strong {
+	font-weight: normal
+}
+
+a {
+	text-decoration: none
+}
+
+h3 {
+	height: 50px;
+	line-height: 50px;
+}
+
+body {
+	background: #E8E8E8;
+	color: #333
+}
+
+/*.head {
+	height: 60px;
+	background: #fff;
+	box-shadow: 0 2px 2px #9A7B2C;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%
+}*/
+.head {
+	height: 70px;
+	background: url(../images/bg.png);
+	box-shadow: 0 2px 2px #c5c5c5;
+}
+
+.nag li .link1.navt{
+	display:inline;
+	padding:0 5px 5px 5px;
+	color:#fa5c53;
+}
+
+.nag li .link1.navt.current{
+	color:#d82826;
+}
+
+.nag li .link1:hover{
+	border-bottom:2px solid #d82826;
+	border-radius:none;
+	color:#d82826;
+}
+
+.clearh {
+	clear: both;
+	height: 10px;
+}
+
+.nav {
+	width: 980px;
+	margin: 0 auto
+}
+
+.navimg {
+	float: left;
+	margin-top: 5px;
+}
+
+.navimg a {
+	border: none
+}
+
+.nag {
+	margin-left: 120px;
+}
+
+.nag li {
+	float: left;
+	margin-left: 10px;
+	margin-top: 20px;
+	width: 70px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.link1 {
+	display: block;
+	width: 70px;
+	height: 30px;
+	font-weight: bold;
+	/*border-radius: 3px;*/
+}
+
+.link1:link,.link1:visited {
+	color: #ec6941;
+	text-decoration: none
+}
+
+.link1:hover {
+	color: #D11303
+}
+
+.current {
+	background: #FA5C53;
+	color: #fff;
+}
+
+.current:link,.current:visited {
+	color: #fff;
+}
+
+.current:hover {
+	color: #FFD2D2
+}
+
+.timer {
+    color: #666b60;
+    font-family: "Arial";
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+}
+.exam_index{
+	position:absolute;
+	top:35px;
+	right:120px;
+	color: #fff;
+	font-size: 12px;
+	padding-left:3px;
+}
+.exam_index_1{
+	background:url(../images/ico_detail_item.png) no-repeat 0 -2539px;
+	width:20px;
+	height:20px;
+	display:inline-block;
+	vertical-align: middle;
+	margin-left:5px;
+}
+.exam_index a:link,.exam_index a:visited {
+	color: #fff;
+}
+
+.exam_index a:hover {
+	color: #fff;
+}
+/***********登录后头部个人中心弹出框**********/
+.logined {
+	margin-top:30px
+}
+#lne {
+	position: absolute;
+	top:30px;
+	right: 0px;
+	width: 80px;
+	z-index:10;
+}
+
+.logmine {
+	min-height:100px;
+	background:#3f4852;
+	width:60px;
+	padding:2px 10px;
+	font-size:14px;
+	margin-top:10px;
+}
+
+.logmine li {
+	height:30px;
+	line-height:30px;
+}
+
+.logmine .link1 {
+	font-weight: normal
+}
+
+.logmine .link1:link,.logmine .link1:visited {
+	color: #fff;
+	text-decoration: none
+}
+
+.logmine .link1:hover {
+	color: #ce4949
+}
+
+.massage {
+	float: right;
+	font-size: 14px;
+	margin-top:0px;
+	/*width: 450px;*/
+	position: relative
+}
+
+#headerUsername {
+	width: 80px;
+}
+
+/***********END登录后头部个人中心弹出框END**********/
+
+.link2 {
+	display: block;
+	width: 40px;
+	float: right;
+	line-height: 30px;
+	color: #333;
+}
+
+.link2:link,.link2 visited {
+	color: #333;
+	text-decoration: none
+}
+
+.link2:hover {
+	color: #fb5e55
+}
+
+.link3:link,.link3:visited {
+	color: #fff;
+	text-decoration: none
+}
+
+.link4:link,.link4:visited {
+	color: #333;
+	text-decoration: none
+}
+
+.link4:hover {
+	color: #fff
+}
+
+.link2.he {
+	color: #FA5C53;
+	text-align: right;
+	margin-left: 10px
+}
+
+/*.link2.he.ico {
+	background: url(../images/ico_detail_item.png) no-repeat -2px -2285px
+}*/
+
+.log_user {
+    background: url("../images/ico_detail_item.png") no-repeat 15px -897px;
+    display: inline-block;
+    height: 30px;
+    vertical-align: top;
+    width: 30px;
+}
+
+.link2.he:hover {
+	color: #D11303
+}
+
+.coursecont {
+	width: 1100px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.baogaolink:visited,.baogaolink:link {
+	color: #fff;
+}
+
+.baogaolink:hover {
+	color: #fff;
+}
+
+body {
+	font-family: "微软雅黑";
+	font-size: 100%;
+	color: #333;
+	line-height: 1.16667
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {
+	margin: 0;
+	padding: 0
+}
+
+ol,ul {
+	list-style: none
+}
+
+fieldset,img {
+	border: 0
+}
+
+a {
+	text-decoration: none;
+}
+
+.heigt {
+	clear: both;
+	height: 10px;
+}
+
+.clearh {
+	clear: both;
+	height: 10px;
+}
+/**************END**************/
+/*********************考题列表************************/
+.listcont {
+	width: 980px;
+	margin: 0 auto;
+	position: relative
+}
+
+.titleul ul {
+	min-height: 20px;
+}
+
+.examhead {
+	min-height: 50px;
+	padding: 15px 20px 15px 30px;
+	background: #fff;
+	width: 710px;
+	border-radius: 5px;
+}
+
+.examhead h2,.examhead p {
+	text-align: left;
+}
+
+.scoretable {
+	text-align: center;
+	background: #efefef;
+}
+
+.scoretable td {
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #fff;
+}
+
+.scoretable .Psorefinal {
+	text-align: center;
+	line-height: 200px;
+	color: #3eb0e0;
+	font-family: Arial;
+	font-size: 50px;
+}
+
+.scoretable td.Psorefinal {
+	background: #fff;
+}
+
+.gray {
+	color: #666;
+	margin-top: 10px;
+}
+
+.examhead,.examtext {
+	text-align: center;
+}
+
+.titleul {
+	border-top: 1px solid #ccc;
+}
+
+.titleul li {
+	width: 130px;
+	line-height: 30px;
+	text-align: center;
+	float: left;
+	margin-right: 10px;
+	font-size: 14px;
+}
+
+.titleul li a {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 15px;
+	cursor: pointer;
+	color: #e41829;
+	border-radius: 5px;
+}
+
+.titleul li a:hover {
+	text-decoration: none;
+}
+
+.titleul .currexam a {
+	background: #fb5e55;
+	color: #fff;
+}
+
+.examans {
+	width: 160px;
+	padding: 20px;
+	text-align: center;
+	background: #fff;
+	border-radius: 5px;
+}
+
+.examans.small {
+	width: 160px;
+	padding: 20px;
+	text-align: center;
+	background: #fff;
+	border-radius: 5px;
+	padding-bottom:15px;
+	padding-top:15px;
+}
+
+.submitexam,.exam_pause,.save-exercise {
+	display: block;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+	background: #3eb0e0;
+	cursor: pointer;
+	margin: 20px auto;
+	width: 150px;
+	border-radius: 5px
+}
+
+.submitexam.small {
+	display: block;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 16px;
+	color: #fff;
+	background: #3eb0e0;
+	cursor: pointer;
+	margin: 20px auto;
+	width: 75px;
+	border-radius: 5px;
+	float:right;
+	margin-bottom:0;
+	margin-top:10px
+}
+
+.exam_pause.small {
+	display: block;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 16px;
+	color: #fff;
+	background: #3eb0e0;
+	cursor: pointer;
+	margin: 20px auto;
+	width: 75px;
+	border-radius: 5px;
+	float:left;
+	margin-bottom:0;
+	margin-top:10px
+}
+
+.submitexam.s1 {
+	background: none;
+	color: #333;
+	font-size: 14px;
+	text-align: left;
+	padding-left: 20px;
+}	
+/*题目*/
+.examtext {
+	font-size: 14px;
+	border: none;
+}
+
+.examtit {
+	text-align: left;
+	padding-left: 20px;
+	color: #333;
+	font-weight: bold;
+	line-height: 25px;
+}
+
+.examtit.corec {
+	padding-left:0;
+	margin-left:-10px;
+}
+.examtit.corec.corec_zi {
+	font-size:12px;
+	font-weight:normal;
+	margin-left:0;
+}
+.examlist {
+	padding: 20px;
+	width: 720px;
+	float: left;
+	min-height: 100px;
+	background: #fff;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+
+.itemlist p,.itemlist span {
+	text-align: left;
+	line-height: 40px;
+}
+
+.itemlist {
+	width: 95%;
+	margin: 0 auto;
+	margin-top: 10px;
+	border-bottom: 1px solid #ccc;
+	min-height: 100px;
+}
+
+.quenum {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: bold
+}
+
+.answer {
+	clear:both;
+	padding-left: 20px;
+	margin-top: 10px;
+}
+
+.ansright {
+	color: #fb5e55;
+}
+
+.ansright.spanright {
+	display: block;
+	position: relative;
+	padding-left: 20px;
+}
+
+.ansright.spanright.no {
+	color: #333;
+	padding-left: 0px;
+	margin-top: 5px;
+	margin-left: 20px;
+}
+
+.ansright.spanright.no input {
+	margin-right: 15px;
+}
+.ansright.spanright.no .ansLable {
+	width:60px;
+	display:inline-block;
+	padding-left:20px;
+}
+.ansLable:hover {
+    background-color: #E8E8E8;
+    border-radius:5px;
+}
+.ansright.spanright.no textarea {
+	height: 200px;
+	margin-right: 20px;
+	width: 600px;
+	border: 1px solid #999;
+	border-radius: 3px;
+}
+
+.ansright.spanright.no.ew {
+	margin-left: 0;
+}
+
+.ansright.spanright.no.er {
+	margin-left: 10px;
+}
+
+.ansright.spanright.no.et {
+	margin-left: 20px;
+}
+
+.my_answer span {
+	color: #3eb0e0;
+	font-weight: bold;
+	display: block;
+}
+
+.answer_1 {
+	padding-left: 0;
+}
+
+.ansright.spanright.no .vtk {
+	width: 300px;
+	height: 30px;
+	color: #999;
+	border: 1px solid #999;
+	border-radius: 3px;
+}
+
+.vtk.lfloat {
+	float: left
+}
+
+.dbuserdo,.dbuserdo1 {
+	position: absolute;
+	top: 0;
+	right: 10px;
+}
+
+.shouc {
+	display: block;
+	text-align: right
+}
+
+.shouc a {
+	float: right
+}
+
+.answer .stro {
+	font-size: 14px;
+	font-weight: bold
+}
+
+.dblink {
+	padding-left: 20px;
+	cursor: pointer;
+	color: #333;
+	float: right;
+}
+
+.dblink.db1 {
+	background-position: 0 -435px;
+}
+
+.dblink.db2 {
+	background-position: 0 -233px;
+}
+
+.dblink.db3 {
+	background: url(../images/icon.png) no-repeat left;
+	background-position: 0 -203px;
+}
+
+.examans ul {
+	margin-top: 10px;
+}
+
+.examans ul li {
+	width: 32px;
+	float: left;
+	margin-bottom: 5px;
+}
+
+.examans ul li span {
+	display: block;
+	height: 20px;
+	width: 20px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background: #DFDFDF;
+	cursor: pointer;
+	text-align: center;
+	line-height: 20px;
+}
+
+.cardspan {
+	display:block; 
+	height:25px; 
+	line-height:25px; 
+	color:#fff; 
+	background:#3eb0e0; 
+	border-radius:5px;
+	cursor:pointer;
+	margin-bottom:5px;
+}
+.card_cl{
+	text-align:left;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:5px;
+}
+
+.card_exam{display:none;}
+.cardul {
+	 background:#fff;
+}
+
+.cardul span:hover{
+	background: #FFAA00;
+}
+
+.unfinish {
+	color:#FF0
+}
+
+.floaLe {
+	float: left;
+	line-height: 35px;
+	margin-right: 10px;
+}
+
+.examnum {
+	display: block;
+	height: 27px;
+	width: 27px;
+	text-align: center;
+	line-height: 25px;
+	color: #202020;
+	background: #efefef;
+	box-shadow: 0 1px 1px #ccc;
+	-o-box-shadow: 0 1px 1px #ccc;
+	-ms-box-shadow: 0 1px 1px #ccc;
+	-moz-box-shadow: 0 1px 1px #ccc;
+	-webkit-box-shadow: 0 1px 1px #ccc;
+	border: 1px solid #ccc;
+	float: left;
+	margin: 5px 5px 5px 0
+}
+
+.examnum.green {
+	background: #63A428
+}
+
+.examnum.red {
+	background: #E72F1B;
+}
+
+.examhead_shoucang {
+	background: none repeat scroll 0 0 #fff;
+	min-height: 50px;
+	padding-left: 40px;
+	padding-top: 25px;
+	text-align: left
+}
+
+.examns_0 ul {
+	width: 200px;
+}
+
+.examns_0 li {
+	float: none;
+	width: 200px;
+}
+
+.child {
+	margin-top: 10px;
+}
+
+.exam_time {
+	margin-top: 10px;
+}
+.exam_time.time1 {
+	margin-top:5px;
+}
+
+.question {
+	margin: 15px auto 0;
+}
+
+.right_menu {
+	float: right;
+}
+
+.left_nemu {
+	float: left;
+	width: 720px;
+}
+
+.right_anw {
+	color: #3eb0e0;
+	font-weight: bold;
+}
+
+.jiexilist {
+	margin: 5px auto 0;
+	min-height: 70px;
+	width: 95%;
+	display: none;
+	color: #666;
+	background: #E8F7FC;
+	padding: 10px;
+}
+
+.jiexilist p {
+	line-height: 30px
+}
+
+.t_jiexi {
+	min-height: 100px
+}
+
+.t_jiexi  li {
+	float: left;
+}
+
+.jiexi_video {
+	margin: 8px;
+	width: 146px;
+}
+
+.item_zn {
+	border-bottom: none;
+	margin: 0  auto;
+}
+
+.quename {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.examans ul li .over_answer {
+	color: #fff;
+	background-color: #fb5e55;
+	border: 1px solid  #fb5e55;
+}
+
+.examans ul li .error_answer {
+	color: #fff;
+	background-color: #fb5e55;
+	border: 1px solid #fb5e55;
+}
+
+.examans ul li .right_answer {
+	color: #fff;
+	background-color: #0fce6e;
+	border: 1px solid #0fce6e;
+}
+
+.ntitle {
+	margin-bottom: 0;
+	font-size: 18px;
+}
+
+.qtype {
+	color: #fb5e55;
+	font-weight: 700;
+}
+
+.paper_answer  ul li .error_answer {
+	color: #fff;
+	background-color: #fb5e55;
+	border: 1px solid  #fb5e55;
+}
+
+.paper_answer  ul li .right_answer {
+	color: #fff;
+	background-color: #0fce6e;
+	border: 1px solid #0fce6e;
+}
+
+.fenli {
+	margin-right: 15px;
+}
+
+.ex_text {
+	border:none;
+	border-bottom:1px solid #ccc;	
+	text-align:center;
+}
+
+.options {
+    border-bottom: 1px dotted #e5e5e5;
+    padding: 5px 20px;
+}
+
+.options ul {
+    margin: 0;
+    padding: 0;
+}
+
+.options li {
+    font-size: 14px;
+    line-height: 36px;
+    padding-left: 6px;
+    position: relative;
+    text-align: left;
+}
+
+.options li:hover {
+    background-color: #E8E8E8;
+}
+
+.options li span {
+    padding: 5px 10px 5px 10px;
+    width: 22px;
+}
+
+.optionSelected {
+    background-image: url(../images/selected.png);
+}
+
+/*************END*************/
+
+
+/*************************题库首页**************************/
+.zn_head {
+	margin-bottom: auto;
+}
+
+.youshi {
+	margin: 20px auto 0;
+	width: 980px;
+}
+
+.youshi ul li {
+	padding: 5px;
+	width: 235px;
+	float: left;
+}
+
+.cate {
+	margin: 20px auto 0;
+	width: 980px;
+}
+
+.cate ul li {
+	float: left;
+}
+
+.cate_content li {
+	width: 163px;
+	_width: 160px;
+	height: 90px;
+	overflow: hidden;
+	float: left;
+	min-height: 100px;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+	position: relative
+}
+
+.sortbox {
+	display: block;
+	width: 160px;
+	_width: 157px;
+	height: 90px;
+	text-align: center;
+	line-height: 90px;
+}
+
+.sortlink:link,.sortlink:visited {
+	color: #fff;
+	text-decoration: none
+}
+
+.sortlink:hover {
+	color: #fff
+}
+
+.sortbox.s1 {
+	background: #FF8080
+}
+
+.sortbox.s2 {
+	background: #7CDDE2
+}
+
+.sortbox.s3 {
+	background: #66cccc
+}
+
+.sortbox.s4 {
+	background: #FF9B6A
+}
+
+.sortbox.s5 {
+	background: #E99AF3
+}
+
+.sortbox.s6 {
+	background: #81C7ED
+}
+
+.sortbox.s7 {
+	background: #ECC188
+}
+
+.sortbox.s8 {
+	background: #B16565
+}
+
+.sortbox.s9 {
+	background: #E77314
+}
+
+.shadow {
+	width: 160px;
+	height: 90px;
+	display: block;
+	position: absolute;
+	top: -90px;
+	left: 0;
+	z-index: 2px;
+	background: #72CCE7;
+	text-align: center;
+	line-height: 90px;
+	color: #fff;
+}
+
+.intoexam {
+	color: #fff;
+	background: #FF8484;
+	padding: 2px 10px;
+	border: 2px solid #fff;
+	border-radius: 5px
+}
+
+.cate_content p {
+	text-align: center;
+	line-height: 100px;
+}
+
+.etitle li {
+	float: left;
+	width: 325px;
+}
+/***************END*****************/
+
+/*****************题库首页图片切换样式*********************/
+.flexslider{
+	position:relative;
+	height:400px;
+	overflow:hidden;
+	background:url(../images/loading.gif) 50% no-repeat;
+}
+.slides{
+	position:relative;
+	z-index:1;
+}
+.slides li{
+	height:400px;
+}
+.flex-control-nav{
+	position:absolute;
+	bottom:30px;
+	z-index:2;
+	width:100%;
+	text-align:center;
+}
+.flex-control-nav li{
+	display:inline-block;
+	width:14px;
+	height:14px;
+	margin:0 5px;
+	*display:inline;
+	zoom:1;
+}
+.flex-control-nav a{
+	display:inline-block;
+	width:14px;
+	height:14px;
+	line-height:40px;
+	overflow:hidden;
+	background:url(../images/dot.png) right 0 no-repeat;
+	cursor:pointer;
+}
+.flex-control-nav .flex-active{
+	background-position:0 0;
+}
+
+.flex-direction-nav{
+	position:absolute;
+	z-index:3;
+	width:100%;
+	top:45%;
+}
+.flex-direction-nav li a{
+	display:block;
+	width:50px;
+	height:50px;
+	overflow:hidden;
+	cursor:pointer;
+	position:absolute;
+}
+.flex-direction-nav li a.flex-prev{
+	left:40px;
+	background:url(../images/prev.png) center center no-repeat;
+}
+.flex-direction-nav li a.flex-next{
+	right:40px;
+	background:url(../images/next.png) center center no-repeat;
+}
+/**************END题库首页图片切换样式END****************/
+/**********************题库四大模块样式************************/
+.ebody {
+	margin: 0 auto;
+	width: 980px;
+}
+
+.ebody ul li {
+	width: 485px;
+	float: left;
+	margin-top: 10px;
+	height: 200px;
+	overflow: hidden;
+	cursor: pointer
+}
+
+.ebody ul li.eb1,.ebody ul li.eb3 {
+	padding-right: 5px;
+}
+
+.ebody ul li.eb2,.ebody ul li.eb4 {
+	padding-left: 5px;
+}
+
+.body_content {
+	width: 478px;
+	height: 300px;
+	position: relative;
+	background: #91cbf3
+}
+
+.bcont1 {
+	width: 478px;
+	height: 300px;
+	position: relative;
+	background: #FFA477
+}
+
+.bcont2 {
+	width: 478px;
+	height: 300px;
+	position: relative;
+	background: #C581D8
+}
+
+.bcont3 {
+	width: 478px;
+	height: 300px;
+	position: relative;
+	background: #94DB60
+}
+
+.topbox {
+	position: absolute;
+	left: -468px;
+	top: 0;
+	z-index: 3;
+	width: 478px;
+	height: 300px;
+	background: #39F
+}
+
+.topbox1 {
+	position: absolute;
+	left: -468px;
+	top: 0;
+	z-index: 3;
+	width: 478px;
+	height: 300px;
+	background: #FF7B3C
+}
+
+.topbox2 {
+	position: absolute;
+	left: -468px;
+	top: 0;
+	z-index: 3;
+	width: 478px;
+	height: 300px;
+	background: #B054CF
+}
+
+.topbox3 {
+	position: absolute;
+	left: -468px;
+	top: 0;
+	z-index: 3;
+	width: 478px;
+	height: 300px;
+	background: #6FC038
+}
+
+.trinto {
+	padding: 5px 10px;
+	font-size: 18px;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 3px;
+	position: absolute;
+	z-index: 2;
+	top: 130px;
+	right: 30px;
+}
+
+.trinto:hover {
+	background: url(../images/bg.png)
+}
+
+.dec {
+	color: #fff;
+	font-size: 16px;
+	display: block;
+	width: 200px;
+	position: absolute;
+	top: 60px;
+	right: 20px;
+	text-align: left;
+	line-height: 25px;
+}
+/***************END*****************/
+
+/************************试题页面解析收藏与展开样式**************************/
+.dblink1 {
+	float: none;
+	display: block;
+	width: 200px;
+}
+
+.dblink1.sc {
+	display: block;
+	float: right;
+	width: 80px;
+	padding-left: 20px;
+	background: url(../images/ico_detail_item.png) left center no-repeat;
+	background-position: 0px 4px;
+	cursor:pointer;
+}
+
+.dblink1.qx {
+	display: block;
+	float: right;
+	width: 80px;
+	padding-left: 20px;
+	background: url(../images/ico_detail_item.png) left center no-repeat;
+	background-position: 0px -1790px;
+	cursor:pointer;
+}
+
+/*材料题收藏取消*/
+.dblink1.material_sc {
+	display: block;
+	float: right;
+	width: 80px;
+	padding-left: 20px;
+	background: url(../images/ico_detail_item.png) left center no-repeat;
+	background-position: 0px 4px;
+	cursor:pointer;
+}
+
+.dblink1.material_qx {
+	display: block;
+	float: right;
+	width: 80px;
+	padding-left: 20px;
+	background: url(../images/ico_detail_item.png) left center no-repeat;
+	background-position: 0px -1790px;
+	cursor:pointer;
+}
+
+.dblink1.db2 {
+	display: block;
+	float: left;
+	width: 80px;
+	padding-left: 20px;
+	background: url(../images/ico_detail_item.png) left center no-repeat;
+	background-position: 0px 4px;
+}
+
+.dblink1.db5 {
+	display: block;
+	float: left;
+	width: 80px;
+	padding-left: 20px;
+	background: url(../images/ico_detail_item.png) right center no-repeat;
+	background-position: 0px -1826px;
+}
+.dblink1.db6 {
+	display: block;
+	float: left;
+	width: 80px;
+	background: url(../images/ico_detail_item.png) right center no-repeat;
+	background-position: 0px -1865px;
+}
+/************************END试题页面收藏与展开样式END**************************/
+/****************试题展开解析样式*****************/
+.examlabel {
+	color: #2EB9F7;
+	background: none repeat scroll 0 0 #3eb0e0;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	padding: 2px 10px;
+	width: 600px;
+}
+
+.t_jiexi p {
+	text-align: center
+}
+
+.link2.lw {
+	width: 100%;
+	float: none;
+	color: #666;
+}
+
+.link2.lw:link,.link2.lw visited {
+	color: #333;
+	text-decoration: none
+}
+
+.link2.lw:hover {
+	color: #fb5e55
+}
+/****************END试题展开解析样式END*****************/
+
+
+
+
+/****************题库三大功能模块样式（练习与模考、能力评估报告、我的练习）*************/
+.etitle li {
+	height: 120px;
+}
+
+.etitle li a {
+	display: block;
+	width: 300px;
+	height: 120px;
+	line-height: 180px;
+	background: url(../images/bank.png) no-repeat #fff;
+	font-size: 18px;
+	box-shadow: 0 1px 2px #ccc
+}
+
+.etitle li.currtrain a {
+	background: url(../images/bank1.png) no-repeat #3eb0e0;
+	color: #fff;
+}
+
+.etitle li.currtrain a:link,.etitle li.currtrain a:visited {
+	color: #fff;
+}
+
+.etitle li a:link,.etitle li a:visited {
+	color: #73cafc;
+}
+
+.etitle li a:hover {
+	background: url(../images/bank1.png) no-repeat #3eb0e0;
+	color: #fff;
+}
+.manum {
+	font-style: normal;
+	padding: 5px 9px;
+	background: #FF4D4D;
+	color: #fff;
+	font-size: 12px;
+}
+
+.etitle li a.t1 {
+	background-position: 0 0
+}
+
+.etitle li a.t2 {
+	background-position: 0 -121px
+}
+
+.etitle li a.t3 {
+	background-position: 0 -250px
+}
+.mbm_btn.no_btn {
+	background: none repeat scroll 0 0 #ccc
+}
+
+.mbm_btn.no_btn:hover {
+	color: #fff;
+	background: #ccc
+}
+/**********END题库三大功能模块样式（练习与模考、能力评估报告、我的练习）END*************/
+
+/************************考点专项练习弹窗 知识分类树形结构样式*************************/
+#training_tc {
+	width: 600px;
+	margin: 0 auto;
+	background-color: #fff;
+	position: relative;
+	display: none;
+	z-index: 13;
+	position: fixed;
+	top: 200px;
+	left: 30%;
+	border-radius: 5px;
+}
+
+.training_tc{
+	height:300px;
+	overflow-y:scroll;
+}
+
+#training_zt {
+	width: 600px;
+	margin: 0 auto;
+	background-color: #fff;
+	position: relative;
+	display: none;
+	z-index: 13;
+	position: fixed;
+	top: 100px;
+	left: 30%;
+	border-radius: 5px;
+}
+
+
+.tc td {
+	font-size: 14px;
+	line-height: 20px;
+	height: 30px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.tc {
+	padding: 0 20px 10px 30px;
+}
+
+.t_zsd {
+	font-size: 14px;
+	line-height: 25px;
+	padding-left: 20px;
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+.t_zsd tr td.second {
+	padding-left: 20px;
+}
+
+.t_zsd tr td.third {
+	padding-left: 40px;
+}
+
+.t_zsd tr td .tree_parent {
+	background: url("../images/ico_detail_item.png") no-repeat -54px -1985px;
+	padding-left: 25px;
+	cursor: pointer;
+	display: block;
+}
+
+.t_zsd tr td .tree_children {
+	background: url("../images/ico_detail_item.png") no-repeat -54px -1936px;
+	padding-left: 25px;
+	cursor: pointer;
+}
+
+.t_zsd  tr td .tree_none {
+	background: url("../images/ico_detail_item.png") no-repeat -54px -2017px;
+	padding-left: 25px;
+	cursor: pointer;
+}
+
+.t_zsd td {
+	border-bottom: 1px solid #e4e4e4;
+	height: 40px;
+}
+
+.t_zsd .mbm_btn {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	width: 60px;
+}
+
+.t_title {
+	width: 100%;
+	height: 30px;
+	padding-top: 5px;
+}
+
+.t_title h2 {
+	margin-left: 20px;
+	font-size: 16px;
+	font-weight: 700;
+	margin-top: 10px;
+}
+
+.close {
+	padding: 3px;
+	color: #000;
+	font-weight: bold;
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 0;
+	border-radius: 0 6px 0 0;
+	font-size: 16px;
+}
+.mbm_btn {
+	display: block;
+	width: 70px;
+	text-align: center;
+	background: #3eb0e0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #fff;
+	border-radius: 3px;
+	-o-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	font-size: 14px;
+}
+
+.mbm_btn.mpink {
+	background: #FF6A6A;
+	position: absolute;
+	font-size: 16px;
+	top: 130px;
+	right: 50px;
+	padding: 5px 10px
+}
+
+.mbm_btn.mpink:hover {
+	background: #FF9595
+}
+
+.mbm_btn:hover {
+	color: #fff;
+	background: #75C7E6
+}
+/**********END考点专项练习弹窗 知识分类树形结构样式END*************/
+
+
+#stop {
+	width: 443px;
+	height: 211px;
+	background: url(../images/huhu.jpg) no-repeat center;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	position: relative;
+	display: none;
+	z-index: 13;
+	position: fixed;
+	top: 250px;
+	left: 30%;
+	border: 1px solid #F0F0F0;
+	box-shadow: 0 1px 2px #ccc;
+	border-radius: 3px
+}
+
+
+/*********************真题模考弹窗样式*************************/
+.pager-list {
+	width: 550px;
+	margin: 0 auto;
+	text-align: center
+}
+
+.pagination {
+	float: right;
+	margin-right: 30px;
+}
+
+.pagination ul li {
+	float: left;
+	width: 20px;
+	padding-left: 10px;
+}
+
+.pagination ul li a, .pagination ul li span {
+	float: left;
+	display: block;
+	height: 25px;
+	width: 25px;
+	text-align: center;
+	line-height: 25px;
+	text-decoration: none;
+	color: #75C7E6;
+	border: 1px solid #98D6ED;
+	background: #98D6ED;
+	border-radius: 3px
+}
+
+.label_provice li {
+	float: left;
+	width: 80px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	/*text-align: center;*/
+	margin-top: 5px;
+}
+
+.label_provice {
+	padding-left: 30px;
+	padding-top: 10px;
+	min-height: 30px;
+	font-size: 14px;
+}
+
+.label_pa a:link,.label_pa a:visited {
+	color: #999;
+	text-decoration: none
+}
+
+.label_pa span {
+	color: #666;
+	cursor: pointer;
+	padding: 1px 10px;
+	border-radius: 7px;
+}
+
+.titlelist {
+	padding-left: 15px;
+	background: url(../images/ico_detail_item.png) no-repeat 0 -2345px;
+}
+
+.page-number:link,.page-number:visited {
+	background: #D1E7EF;
+	color: #3eb0e0;
+}
+
+.page-number:hover {
+	background: #75C7E6;
+	color: #fff;
+}
+
+.pageractive a {
+	background: #75C7E6;
+	color: #fff;
+}
+
+.pageractive a:link,.pageractive a:visited {
+	background: #75C7E6;
+	color: #fff;
+}
+
+.pageractive a:hover {
+	color: #fff
+}
+/*****************END真题模考弹窗样式END*******************/
+
+/*****************题库页面头部****************/
+.exam_head {
+	height: 80px;
+	background: #3f4852
+}
+
+.examlogo {
+	width: 980px;
+	margin: 0 auto;
+	position: relative
+}
+
+.elogo {
+	position: absolute;
+	top: 0;
+	top: 15px;
+}
+
+.exambtn_lore {
+	position: absolute;
+	right: 0;
+	/*top: 10px;*/
+	display: block;
+	width: 121px;
+	height: 80px;
+	margin-top: 20px;
+}
+.exit:link,.exit:visited {
+	color: #fff;
+}
+
+.exit:hover {
+	color: #ccc;
+}
+
+.vlogin {
+	color: #fff;
+	width: 250px;
+	float: right;
+	margin-top: 30px;
+	text-align: right;
+	font-size: 15px;
+	line-height: 30px;
+	height: 30px;
+}
+/******************END题库页面头部END********************/
+
+/*******************题库头部登录注册************************/
+
+/*.tkbtn {
+	display: inline-block;
+	width: 60px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	background: url(../images/btn.png) no-repeat;
+	font-size: 14px;
+}
+
+.tkbtn:link,.tkbtn:visited {
+	color: #fff;
+	text-decoration: none
+}
+
+.tkbtn:hover {
+	color: #fff;
+	background: url(../images/btn_hover.png) no-repeat;
+}
+
+.tkbtn:active {
+	color: #fff;
+	background: url(../images/btn_active.png) no-repeat;
+}
+
+.tkbtn.tklog {
+	background-position: 0px 0px;
+	float: left
+}
+
+.tkbtn.tkreg {
+	background-position: -0.87px -44px;
+	float: right
+}*/
+.exambtn_lore {
+	display: block;
+	width: 121px;
+	height: 30px;
+	float:right
+}
+
+.tkbtn {
+	display: inline-block;
+	width: 60px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	background: url(../images/btn1.png) no-repeat;
+	font-size: 14px;
+}
+
+.tkbtn:link, .tkbtn:visited {
+	color: #fff;
+	text-decoration: none;
+}
+.tkbtn:hover {
+color: #fff;
+background: url(../images/btn_hover1.png) no-repeat;
+}
+
+.tkbtn.tklog {
+	background-position: 0px 0px;
+	float: left;
+}
+
+.tkbtn.tkreg {
+	background-position: -0.87px -44px;
+	float: right;
+}
+/***************END题库头部登录注册END*****************/
+
+/*****************trainingbar题库头部下方分类条样式********************/
+.trbar {
+	display: block;
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+	cursor: pointer;
+}
+
+.trbar strong {
+	padding-right: 5px;
+	color: #3399ff;
+	font-weight: bold
+}
+
+.trbar_zl a {
+	color: #fff;
+}
+
+.trbar_zl a:hover {
+	color: #3399ff;
+}
+
+.trainingbar {
+	background: #b9b9b9;
+	height: 30px;
+	line-height: 25px;
+	color: #fff;
+	font-size: 14px;
+}
+
+a.cur_zl {
+	color: #3399ff
+}
+
+.hidebox {
+	display: none;
+	width: 935px;
+	min-height: 80px;
+	padding: 10px 20px;
+	background: #fff;
+	box-shadow: 0 0 1px #333;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	z-index: 5;
+	color: #333
+}
+
+.hidebox h4 {
+	height: 30px;
+	line-height: 35px;
+	padding: 0;
+	margin-bottom: 0;
+	color: #3399ff
+}
+
+.hideul {
+	width: 1070px;
+	overflow: hidden
+}
+
+.hideul li {
+	padding-right: 30px;
+	float: left;
+	height: 25px;
+	line-height: 25px;
+}
+
+.hidebox a {
+	font-size: 14px;
+	margin-top: 0;
+}
+
+.hidebox a:link,.hidebox a:visited {
+	color: #333;
+}
+
+.hidebox a:hover {
+	color: #F55
+}
+
+.hovver {
+	display: inline-block;
+	min-width: 100px;
+}
+
+
+.bg_btn {
+	background: none repeat scroll 0 0 #3eb0e0;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 40px;
+	padding: 5px 20px;
+}
+
+.bg_btn:hover,.submitexam:hover,.exam_pause:hover,.save-exercise:hover {
+	background: #89D0EF
+}
+/***********************END题库头部下方分类条样式END*************************/
+
+/*************************能力评估报告***************************/
+.examhead_shoucang {
+	background: none repeat scroll 0 0 #fff;
+	min-height: 50px;
+	padding-left: 40px;
+	padding-top: 25px;
+	text-align: left
+}
+
+.paper_right {
+	font-size: 70px;
+	color:#0fce6e;
+	font-weight:bold
+}
+
+.paper_wrong {
+	font-size: 70px;
+	color:#fb5e55;
+	font-weight:bold
+}
+
+.paper_t {
+	text-align: left;
+	width: 200px;
+	float: left
+}
+
+.paper_t.title {
+	width: 720px;
+	font-size: 16px;
+	font-weight: 700
+}
+
+.paper_answer {
+	background: none repeat scroll 0 0 #fff;
+	border: 1px solid #ebebeb;
+	float: left;
+	text-align: center;
+	width:680px; 
+	padding-left:20px; 
+	padding-right:5px; 
+	padding-top:10px; 
+	padding-bottom:10px;
+	margin-bottom:5px;
+}
+
+.paper_answer ul {
+	/*min-height: 60px;*/
+}
+
+.paper_answer ul li {
+	width: 25px;
+	float: left;
+	margin-bottom: 5px;
+	padding: 3px;
+}
+
+.paper_answer ul li span {
+	display: block;
+	height: 20px;
+	width: 20px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background: #DFDFDF;
+	cursor: pointer;
+	text-align: center;
+	line-height: 20px;
+}
+
+.sjkd {
+	border-collapse: collapse;
+	text-align: left;
+	margin: 0 auto;
+	margin-top: 40px;
+	border: 1px solid #ccc;
+}
+
+.sjkd tr th {
+	height: 40px;
+	border: 1px solid #ccc;
+	background-color: #dfdfdf;
+	text-align: center
+}
+
+.sjkd tr td {
+	height: 30px;
+	border: 1px solid #ccc;
+	text-align: center
+}
+
+.sjkd tr td.first,.sjkd tr td.second,.sjkd tr td.third {
+	text-align: left;
+}
+
+.sjkd tr td.second {
+	padding-left: 20px;
+}
+
+.sjkd tr td.third {
+	padding-left: 40px;
+}
+
+.sjkd tr td .tree_parent {
+	background: url("../images/ico_detail_item.png") no-repeat -54px -1989px;
+	cursor: pointer;
+	padding-left: 25px;
+}
+
+.sjkd tr td .tree_children {
+	background: url("../images/ico_detail_item.png") no-repeat -54px -1936px;
+	cursor: pointer;
+	padding-left: 25px;
+}
+
+.sjkd tr td .tree_none {
+	background: url("../images/ico_detail_item.png") no-repeat -54px -1936px;
+	padding-left: 25px;
+	cursor: pointer;
+}
+.sjkd1 {
+	border-collapse: collapse;
+	text-align: left;
+	margin: 0 auto;
+	margin-top: 40px;
+	border: 1px solid #ccc;
+}
+
+.sjkd1 tr th {
+	height: 40px;
+	border: 1px solid #ccc;
+	background-color: #dfdfdf;
+	text-align: center
+}
+
+.sjkd1 tr td {
+	height: 30px;
+	border: 1px solid #ccc;
+	text-align: center
+}
+
+.sjkd1 tr td.second {
+	padding-left: 30px;
+	text-align: left;
+	background: url(../images/ico_detail_item.png) -50px -1830px no-repeat
+}
+
+.sjkd1 tr td.third {
+	padding-left: 40px;
+	text-align: left;
+	background: url(../images/ico_detail_item.png) -40px -1830px no-repeat
+}
+
+.sjkd1 tr td.first {
+	padding-left: 20px;
+	text-align: left;
+	background: url(../images/ico_detail_item.png) -60px -1830px no-repeat
+}
+
+.sjkd1 tr td.first.end {
+	padding-left: 20px;
+	text-align: left;
+	background: url(../images/ico_detail_item.png) -58px -1867px no-repeat
+}
+
+.sjkd1 tr td.third.end {
+	padding-left: 40px;
+	text-align: left;
+	background: url(../images/ico_detail_item.png) -38px -1867px no-repeat
+}
+
+.sjkd1 tr td.second.end {
+	padding-left: 30px;
+	text-align: left;
+	background: url(../images/ico_detail_item.png) -48px -1867px no-repeat
+}
+/***********************END能力评估报告END***************************/
+
+/*****************************题库中我的练习列表样式******************************/
+.exam_yc{
+	float:left;
+	height:300px;
+	width:200px;
+}
+
+.exam_yc_1{
+	float:left;
+	height:300px;
+	width:200px;
+	margin-left:30px;
+}
+.ansnum1 span{
+	font-size:20px;
+	font-weight: normal;
+}
+
+.exam_yc_pm{
+	clear: both;
+	height:120px;
+	line-height:40px;
+	width:200px;
+}
+.exam_yc_pm p{
+	text-align:left;
+}
+.exam_yc_pm p span{
+	font-size:14px;
+	color:#3eb0e0;
+	float:right;
+}
+
+.traincont {
+	width: 940px;
+	background: #fff;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.mbm1 a {
+	font-size: 14px;
+}
+
+.mbm1 .gray {
+	font-size: 12px;
+}
+
+.blacklink:link,.blacklink:visited {
+	color: #333;
+}
+
+.blacklink:hover {
+	color: #fb5e55
+}
+
+.blacklink.blocklink {
+	display: block;
+	height: 59px;
+	min-width: 100px;
+	line-height: 59px;
+}
+
+.etitle li.currtrain {
+}
+
+.mbm1 .blacklink {
+	display: block;
+	height: 20px;
+	line-height: 20px;
+}
+
+.bg1 {
+	width: 160px;
+	height:160px;
+	border:6px solid #00b18f;
+	border-radius:96px;
+	line-height:100px;
+	margin:0 auto;
+}
+
+.bg2 {
+	width: 160px;
+	height:160px;
+	border:6px solid #00b18f;
+	border-radius:96px;
+	line-height:100px;
+	margin:0 auto;
+}
+
+.bg2 h3,.bg1 h3 {
+	font-weight: normal
+}
+
+.ansnum,.ansnum1 {
+	margin-top: 30px;
+	font-size: 50px;
+	font-weight: bold;
+	color: #03B18E
+}
+
+.ansnum1 {
+	color: #3eb0e0
+}
+
+.bg3 {
+	width: 489px;
+	border-left: 1px solid #ccc;
+	float: right;
+	min-height: 216px
+}
+.mbmlist,.mbmlist1 {
+	text-align: left
+}
+
+.mbmlist td {
+	border-bottom: 1px solid #E4E4E4;
+	height: 80px;
+}
+
+.mbmlist1 td {
+	border-bottom: 1px solid #E4E4E4;
+	height: 50px;
+}
+/******************我的练习题库分类知识点树形展开结构样式********************/
+.mbmlist1 tr td.second {
+	padding-left: 20px;
+}
+
+.mbmlist1 tr td.third {
+	padding-left: 40px;
+}
+
+.mbmlist1 tr td .tree_parent {
+	background: url("../images/ico_detail_item.png") no-repeat -54px -1989px;
+	padding-left: 25px;
+	cursor: pointer;
+}
+
+.mbmlist1 tr td .tree_children {
+	background: url("../images/ico_detail_item.png") no-repeat -54px -1936px;
+	padding-left: 25px;
+	cursor: pointer;
+}
+.mbmlist1 tr td .tree_none {
+	background: url("../images/ico_detail_item.png") no-repeat -54px -2017px;
+	padding-left: 25px;
+	cursor: pointer;
+}
+/****************END*****************/
+
+/*****************右侧浮动联系方式信息****************/
+.rmbar {
+	position: fixed;
+	top: 50%;
+	right: -105px;
+	z-index: 2;
+	min-height: 100px;
+	background: #d9534f;
+	border-radius: 5px;
+}
+
+.barico {
+	position: relative;
+	display: block;
+	width: 120px;
+	padding-left: 25px;
+	min-height: 35px;
+	background: url(../images/pictonic-flat_icons.png) no-repeat;
+	cursor: pointer;
+	padding-top: 5px;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+}
+
+.barico:hover {
+	background-color: #FA5C53
+}
+
+.barico.qq {
+	background-position: 0 3px;
+}
+
+.barico.wb {
+	background-position: 0 -65px;
+}
+
+.barico.wx {
+	background-position: 0 -136px;
+}
+
+.barico.em {
+	background-position: 0 -204px;
+}
+
+.barico.top {
+	background-position: 0 -284px;
+}
+
+.hidebar {
+	height: 40px;
+	width: 120px;
+	position: absolute;
+	left: 35px;
+	top: 0;
+	z-index: 5;
+	background: #666;
+	border-radius: 3px 0 0 3px;
+	display: none
+}
+
+.showqq {
+	display: none;
+	position: absolute;
+	left: -95px;
+	top: 0;
+	color: #000;
+	font-size: 12px;
+	z-index: 1010;
+	width: 90px;
+	padding: 1px;
+	white-space: normal;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius: 6px;
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.showem {
+	display: none;
+	position: absolute;
+	left: -95px;
+	top: 0;
+	z-index: 1010;
+	width: 90px;
+	padding: 1px;
+	white-space: normal;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius: 6px;
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.showwb {
+	display: none;
+	position: absolute;
+	left: -95px;
+	top: 0;
+	z-index: 1010;
+	width: 90px;
+	padding: 1px;
+	white-space: normal;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius: 6px;
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+/****************END******************/
+
+
+
+/******************底部*****************/
+.foot_exam {
+	background: #e8e8e8;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+.foot_exam p {
+	color: #666;
+	text-align: center;
+	font-size: 14px;
+	line-height: 25px;
+}
+
+.foot_exam a:link,.foot_exam a:visited {
+	color: #666;
+	text-decoration: none;
+}
+
+.foot_exam a:hover {
+	color: #fa7871;
+	text-decoration: none;
+}
+
+.foot_exam a {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.foot {
+	background: #e8e8e8;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+.foot p {
+	color: #999;
+	text-align: center;
+	font-size: 14px;
+}
+
+.door {
+	height: 60px;
+	background: url(../images/bg.png);
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	box-shadow: -2px 0 2px #9A7B2C;
+	z-index: 3
+}
+
+.dform {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.dform input {
+	width: 270px;
+	height: 35px;
+	line-height: 35px;
+	border-radius: 3px;
+	border: none;
+	background: #FF8E8E;
+	color: #fff;
+	font-size: 16px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 10px;
+}
+/***************END****************/
+
+/**********************弹出透明层样式***************************/
+#mask {
+	width: 100%;
+	height: 100%;
+	background: url(../images/bg4.png);
+	position: fixed;
+	display: none;
+	left: 0px;
+	top: 0px;
+	z-index: 12;
+}
+/*mask IE6 fixed*/
+* html {
+	background: url(*) fixed;
+}
+
+* html body {
+	margin: 0;
+	height: 100%;
+}
+
+* html #mask {
+	position: absolute;
+	left: expression(documentElement.scrollLeft + documentElement.clientWidth - this.offsetWidth);
+	top: expression(documentElement.scrollTop + documentElement.clientHeight - this.offsetHeight);
+}
+/**********************弹出透明层样式end***************************/
+/**********************弹出透明层样式***************************/
+#ztmask {
+	width: 100%;
+	height: 100%;
+	background: url(../images/bg4.png);
+	position: fixed;
+	display: none;
+	left: 0px;
+	top: 0px;
+	z-index: 12;
+}
+/*mask IE6 fixed*/
+* html {
+	background: url(*) fixed;
+}
+
+* html body {
+	margin: 0;
+	height: 100%;
+}
+
+* html #ztmask {
+	position: absolute;
+	left: expression(documentElement.scrollLeft + documentElement.clientWidth - this.offsetWidth);
+	top: expression(documentElement.scrollTop + documentElement.clientHeight - this.offsetHeight);
+}
+/**********************弹出透明层样式end***************************/
+
+.btnlink.bl1 {
+	background: #EC6841;
+	border: none;
+	color: #fff;
+	padding: 8px 50px;
+	border-radius: 3px;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+.btnlink.bl1:link,.btnlink.bl1:visited {
+	color: #fff;
+	text-decoration: none
+}
+
+.btnlink.bl1:hover {
+	background: #FF8E8E;
+	border-color: #666;
+}
+/*tbanner*/
+.clearfix:after {
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both
+}
+/********************底部********************/
+.foot {
+	background: #333;
+	padding-bottom: 10px;
+	padding-top: 20px;
+}
+
+.foot p {
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+}
+
+.door {
+	height: 60px;
+	background: url(../images/bg.png);
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	box-shadow: -2px 0 2px #9A7B2C;
+	z-index: 3
+}
+
+.dform {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.dform input {
+	width: 270px;
+	height: 35px;
+	line-height: 35px;
+	border-radius: 3px;
+	border: none;
+	background: #FF8E8E;
+	color: #fff;
+	font-size: 16px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 10px;
+}
+
+.foot {
+	font-size: 14px;
+}
+
+.fwxwb img {
+	margin: 10px;
+}
+
+.fcontainer {
+	margin: 0 auto;
+	text-align: center;
+	line-height: 30px;
+}
+
+.fwxwb {
+	color: #fff;
+	text-align: center;
+	width: 240px;
+	margin: 0 auto;
+}
+
+.foot a:link,.foot a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+.fwxwb_1 {
+	float: left;
+}
+
+.fwxwb_1 span {
+	display: block;
+}
+
+.fmenu {
+	clear: both;
+}
+
+.fmenu a {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.foot a:hover {
+	color: #fa7871;
+	text-decoration: none;
+}
+
+.foot a,.copyright {
+	color: #fff;
+	text-decoration: none;
+}
+/********************END底部END********************/
+
+
+/********************视频解析********************/
+.video_player {
+    background: none repeat scroll 0 0 #000000;
+    border: 10px solid #333333;
+    display: block;
+    height: 450px;
+    left: 50%;
+    margin-left: -410px;
+    position: absolute;
+    top: 50%;
+    width: 800px;
+    z-index: 13;
+}
+.video_player span {
+    display: block;
+    height: 28px;
+    position: absolute;
+    right: -35px;
+    top: -20px;
+    width: 28px;
+    z-index: 14;
+}
+.video_player a.close {
+    background: url("../images/ico_detail_item.png") no-repeat scroll 0px -2199px transparent;
+    cursor: pointer;
+    display: block;
+    height: 28px;
+    line-height: 100px;
+    overflow: hidden;
+    width: 28px;
+}
+.log_user{
+	background: url("../images/ico_detail_item.png") no-repeat 15px -897px;
+	display: inline-block;
+    height: 30px;
+    width: 30px;
+	vertical-align:top;
+
+}

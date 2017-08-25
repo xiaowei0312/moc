@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>${message("admin.member.add")} - Powered By Sram</title>
+<meta name="author" content="Sram Team" />
+<meta name="copyright" content="Sram" />
+<link href="${base}/resources/admin/css/common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${base}/resources/admin/js/jquery.js"></script>
+<script type="text/javascript" src="${base}/resources/admin/js/jquery.tools.js"></script>
+<script type="text/javascript" src="${base}/resources/admin/js/common.js"></script>
+<script type="text/javascript" src="${base}/resources/admin/js/input.js"></script>
+<script type="text/javascript" src="${base}/resources/admin/js/list.js"></script>
+
+<script type="text/javascript">
+    $().ready(function() {
+        var courseId=$("#courseId").val();
+        $("#mainframeid1").attr("src","${base}/admin/uploadFile/courseLessonList.jhtml?targetType=courselesson&courseId="+courseId);
+        $("#tab>li").each(function(index){
+            $(this).click(function(){  
+	           if(index==0){
+	              $("#tabs-1").css("display","block");
+	              $("#tabs-2").css("display","none");
+	              $("#mainframeid1").attr("src","${base}/admin/uploadFile/courseLessonList.jhtml?targetType=courselesson&courseId="+courseId);
+	           }else if(index==1){
+	              $("#tabs-2").css("display","block");
+	              $("#tabs-1").css("display","none");
+	              $("#mainframeid2").attr("src","${base}/admin/uploadFile/courseLessonList.jhtml?targetType=coursematerial&courseId="+courseId);
+	           }
+	         });
+         });
+    });
+</script>
+</head>
+<body>
+   <input type="hidden" id="courseId" name="courseId" value="${courseId}"/>
+   <ul id="tab" class="tab">
+			<li>
+				<input type="button" value="课时文件" />
+			</li>
+			<li>
+				<input type="button" value="备用资料文件" />
+			</li>
+		</ul>
+		<div id="tabs-1">
+			<table id="courseLesson" class="input tabContent">
+				<iframe id="mainframeid1" name="mainframeid1" marginwidth="0"
+	               	 	marginheight="0" frameborder="0"  src=""  width="100%"  style="min-height:800px;" allowtransparency="yes"></iframe>
+			</table>
+		</div>
+		<div id="tabs-2" style="display:none;">
+			<table id="coursematerial" class="input tabContent">
+			  <iframe id="mainframeid2" name="mainframeid2"marginwidth="0"
+	               	 	marginheight="0" frameborder="0"  src=""  width="100%"  style="min-height:800px;" allowtransparency="yes"></iframe>
+			</table>
+	    </div>
+</body>
+</html>

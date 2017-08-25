@@ -1,0 +1,165 @@
+<<<<<<< .mine
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>谋刻职业教育在线测评与学习平台</title>
+<link href="${base}/resources/moc/css/common.css" rel="stylesheet" type="text/css" />
+<link href="${base}/resources/moc/css/style.css" rel="stylesheet" type="text/css" />
+<link href="${base}/resources/moc/mediaelement/build/mediaelementplayer.min.css" rel="stylesheet" type="text/css" />
+<script src="${base}/resources/moc/js/jquery-1.9.1.js" type="text/javascript" ></script>
+<script src="${base}/resources/moc/mediaelement/build/mediaelement-and-player.min.js" type="text/javascript" ></script>
+<script src="${base}/resources/moc/swfobject/swfobject.js" type="text/javascript" ></script>
+<style type="text/css">
+html, body {
+    height: 100%;
+    background-color: transparent;
+=======
+<script src="${base}/resources/moc/js/jquery-1.8.0.min.js" type="text/javascript" ></script>
+<style>
+body {
+	padding:0;
+	margin: 0;
+>>>>>>> .r4085
+}
+</style>
+<<<<<<< .mine
+<script type="text/javascript">
+
+
+
+$().ready(function() {
+	
+
+	
+	$('audio').mediaelementplayer({
+		success: function(media, node, player) {
+			var events = ['loadstart', 'play','pause', 'ended'];
+			for (var i=0, il=events.length; i<il; i++) {
+				var eventName = events[i];
+				media.addEventListener(events[i], function(e) {
+					if('play' == e.type){//音频页面加载的时候就触发loadstart,所以用play状态
+						lessonLearn();
+					}
+				});
+			}
+		}
+	});
+=======
+<script language="JavaScript" type="text/javascript">
+$(function() {
+	var video_str='<object width="100%" height="100%" '
+	+' type="application/x-shockwave-flash" name="lesson-video-player" '
+	+'id="lesson-video-player" style="visibility: visible;">'
+	+'<param name="wmode" value="opaque"/>'
+	+'<param name="allowFullScreen" value="true"/>'
+	+'<param name="allowScriptAccess" value="always"/>'
+	+'<param name="bgcolor" value="#000000"/>'
+	+'<param name="flashvars" value="src='
+	+'${setting.cloudServerSite}/file/view/${uploadFiles.targetType}/${uploadFiles.targetId}/${uploadFiles.convertHash}.flv/${token}.jhtml'
+	+'&javascriptCallbackFunction=__MediaPlayerEventProcesser&autoPlay=false&autoRewind=false&loop=false&bufferTime=8'
+	+'&plugin_hls=http://192.168.6.123:8080/${base}/resources/moc/video/flashls-0.4.0.3.swf&hls_maxbackbufferlength=300"/>'
+	+'<param name="movie" value="http://cdn.staticfile.org/GrindPlayerCN/1.0.2/GrindPlayer.swf"/>'
+	+'</object>';
+>>>>>>> .r4085
+	
+	var video_str2='<object width="100%" height="100%" '
+	+' type="application/x-shockwave-flash" name="lesson-video-player" '
+	+'data="http://cdn.staticfile.org/GrindPlayerCN/1.0.2/GrindPlayer.swf"'
+	+'id="lesson-video-player" style="visibility: visible;">'
+	+'<param name="wmode" value="opaque"/>'
+	+'<param name="allowFullScreen" value="true"/>'
+	+'<param name="allowScriptAccess" value="always"/>'
+	+'<param name="bgcolor" value="#000000"/>'
+	+'<param name="flashvars" value="src='
+	+'${setting.cloudServerSite}/file/view/${uploadFiles.targetType}/${uploadFiles.targetId}/${uploadFiles.convertHash}.flv/${token}.jhtml'
+	+'&javascriptCallbackFunction=__MediaPlayerEventProcesser&autoPlay=false&autoRewind=false&loop=false&bufferTime=8'
+	+'&plugin_hls=http://192.168.6.123:8080/${base}/resources/moc/video/flashls-0.4.0.3.swf&hls_maxbackbufferlength=300"/>'
+	+'<param name="movie" value="http://cdn.staticfile.org/GrindPlayerCN/1.0.2/GrindPlayer.swf"/>'
+	+'</object>';
+	
+	if ((navigator.userAgent.indexOf('MSIE') >= 0) 
+		&& (navigator.userAgent.indexOf('Opera') < 0)){
+		$('#objectVideo').html(video_str);
+	}else{
+		$('#objectVideo').html(video_str2);
+	}
+});
+</script>
+
+
+[#if uploadFiles??]
+		[#if uploadFiles.fileType == "audio"]
+			<div style="margin:0 auto; width:400px; margin-top:10%">
+				<audio  src="${setting.cloudServerSite}/file/view/${token}/${uploadFiles.id}.jhtml" type="audio/mp3" controls="controls" preload="none"></audio>
+			</div>	
+		[#elseif uploadFiles.fileType == "video"]
+<<<<<<< .mine
+			<script type="text/javascript">
+			var flashvars = {
+			    src: "${setting.cloudServerSite}/file/view/${token}/${uploadFiles.id}.flv",
+			    autoPlay:false,
+			    autoRewind:false,
+			    loop:false,
+			    bufferTime:8,
+			    javascriptCallbackFunction: "onJSBridge"
+			};
+			
+			
+			var params = {
+			    allowFullScreen: true
+			    , allowScriptAccess: "always"
+			    , bgcolor: "#000000"
+			};
+			var attrs = {
+			    name: "player"
+			};
+			
+			swfobject.embedSWF("http://cdn.staticfile.org/GrindPlayerCN/1.0.2/GrindPlayer.swf", "player", "100%", "100%", "10.2", null, flashvars, params, attrs);
+			
+			var player;
+			function onJSBridge(playerId, event, data) {
+			    switch(event) {
+			        case "onJavaScriptBridgeCreated":
+			            player = document.getElementById(playerId);
+			            lessonLearn();
+			            break;
+			        case "ready":
+			        case "loading":
+			        case "playing":
+			        case "paused":
+			        case "buffering":
+			
+			        // other events
+			        case "mediaSize":
+			        case "seeking":
+			        case "seeked":
+			        case "volumeChange":
+			        case "durationChange":
+			        case "timeChange":
+			        case "progress": // for progressive download only
+			        case "complete":
+			        case "advertisement":
+			
+			        default:
+			            // console.log(event, data);
+			            break;
+			    }
+			}
+			</script>
+		
+			<div style="margin:0 auto;width:100%;height:100%;" id="player">
+				
+	 		</div>
+=======
+			<div id="objectVideo">	
+			</div>
+>>>>>>> .r4085
+	    [/#if]
+[#elseif lesson.type=="text"]
+		<div>
+			${lesson.content}
+		</div>
+[/#if]	
+

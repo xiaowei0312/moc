@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/sram/!svn/ver/4105/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram
+END
+Setting.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/sram/!svn/ver/3452/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/Setting.java
+END
+Page.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/Page.java
+END
+Order.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/Order.java
+END
+Principal.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/Principal.java
+END
+HtmlCleanEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/HtmlCleanEditor.java
+END
+Pageable.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/Pageable.java
+END
+BigDecimalNumericFieldBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/BigDecimalNumericFieldBridge.java
+END
+Message.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/Message.java
+END
+LogConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/LogConfig.java
+END
+CommonAttributes.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/CommonAttributes.java
+END
+AuthenticationToken.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/AuthenticationToken.java
+END
+EnumConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/EnumConverter.java
+END
+CaptchaEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/CaptchaEngine.java
+END
+ExcelView.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/ExcelView.java
+END
+DateEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/DateEditor.java
+END
+Template.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/Template.java
+END
+Filter.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/Filter.java
+END
+ResourceNotFoundException.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/sram/!svn/ver/1693/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/storage/src/com/sram/ResourceNotFoundException.java
+END

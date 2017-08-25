@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/sram/!svn/ver/3270/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/moc/password
+END
+find.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/sram/!svn/ver/3270/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/moc/password/find.ftl
+END
+reset.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/sram/!svn/ver/915/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/moc/password/reset.ftl
+END
+mail.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/sram/!svn/ver/922/%E9%A1%B9%E7%9B%AE%E4%BB%A3%E7%A0%81/moc/WebContent/WEB-INF/template/moc/password/mail.ftl
+END

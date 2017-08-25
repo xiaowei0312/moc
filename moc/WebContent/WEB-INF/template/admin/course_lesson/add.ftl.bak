@@ -1,0 +1,432 @@
+[#assign shiro=JspTaglibs["/WEB-INF/tld/shiro.tld"] /]
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>${message("admin.course.add")} - Powered By Sram</title>
+<meta name="author" content="Sram Team" />
+<meta name="copyright" content="Sram" />
+<link href="${base}/resources/admin/css/common.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${base}/resources/admin/js/jquery.js"></script>
+<script type="text/javascript" src="${base}/resources/admin/js/jquery.tools.js"></script>
+<script type="text/javascript" src="${base}/resources/admin/js/jquery.validate.js"></script>
+<script type="text/javascript" src="${base}/resources/admin/editor/kindeditor.js"></script>
+<script type="text/javascript" src="${base}/resources/admin/js/common.js"></script>
+<script type="text/javascript" src="${base}/resources/admin/js/input.js"></script>
+
+<script type="text/javascript">
+
+
+$().ready(function() {
+
+	var $inputForm = $("#inputForm");
+	var $courseCategoryId = $("#courseCategoryId");
+	var $browserButton = $("#browserButton");
+	var $current = $(".current");
+	var $default = $(".default");
+	var $type = $("#type");
+	var $mediaId = $("#mediaId");
+	var $mediaName = $("#mediaName");
+	var $length = $("#length");
+	var $isUploadedFile = $("#isUploadedFile");
+	var $btnSubmit = $("#btnSubmit");
+	var $free = $("#free");
+	var $list = $(".list tr"); 
+	var $videoMinute = $("#videoMinute"); 
+	var $videoSeconds = $("#videoSeconds"); 
+	var $audioMinute = $("#audioMinute"); 
+	var $audioSeconds = $("#audioSeconds"); 
+	
+	
+	[@flash_message /]
+	
+	$current.mouseover(function(){
+		$(this).addClass("blue current");
+		$(this).mouseleave(function(){
+			$(this).removeClass("blue");
+		});
+	});
+	
+	$current.click(function(){
+		var currentName = $(this).attr("name");
+		var $currentShow = $("#"+$(this).attr("name"));
+		$currentShow.prevAll().hide();
+		$currentShow.nextAll().hide();
+		$currentShow.show();
+		
+		$(this).prevAll().removeClass("green");
+		$(this).nextAll().removeClass("green");
+		$(this).addClass("green");
+		recoverInitialVal();
+	});
+	
+	$free.click(function(){
+		if($(this).is(':checked')){
+			$free.val("1");
+		}else{
+			$free.val("0");
+		}
+	});
+	
+	$list.click(function(){
+		$(this).css("background-color","#B2E0FF");
+		$(this).siblings().each(function(){
+			$(this).css("background-color","#FFFFFF");
+		});
+		$mediaId.val($(this).attr("id"));
+		$mediaName.val($(this).children(":first-child").html());
+		$length.val($(this).attr("length"));
+		if('video'==$type.val()){
+			$videoMinute.val(parseInt($length.val()/60));
+			$videoSeconds.val(parseInt($length.val()%60));
+		}else if('audio'==$type.val()){
+			$audioMinute.val(parseInt($length.val()/60));
+			$audioSeconds.val(parseInt($length.val()%60));
+		}
+		$isUploadedFile.val('true');
+	})
+
+	
+	if ($.tools != null) {
+		var $tab = $("#tab");
+
+		// Tab效果
+		$tab.tabs("table.tabContent, div.tabContent", {
+			tabs: "input",
+			onClick:function(index){  
+				var targetValue = index.target.defaultValue;
+				if(targetValue == '视频'){
+					document.getElementById("videoIframe").src = "${setting.cloudServerSite}/uploadFiles/toUpload.jhtml?userId=${userId}&userName=[@shiro.principal /]&targetType=courselesson&targetId=${courseId}&fileType=video";
+					$type.val('video');
+					recoverInitialVal();
+				}else if(targetValue == '音频'){
+					document.getElementById("audioIframe").src = "${setting.cloudServerSite}/uploadFiles/toUpload.jhtml?userId=${userId}&userName=[@shiro.principal /]&targetType=courselesson&targetId=${courseId}&fileType=audio";
+					$type.val('audio');
+					recoverInitialVal();
+				}else if(targetValue == '图文'){
+					$type.val('text');
+					recoverInitialVal();
+					//图片不考虑上传附件，设置为true
+					$isUploadedFile.val('true');
+				}else if(targetValue == 'PPT'){
+					document.getElementById("pptIframe").src = "${setting.cloudServerSite}/uploadFiles/toUpload.jhtml?userId=${userId}&userName=[@shiro.principal /]&targetType=courselesson&targetId=${courseId}&fileType=ppt";				
+					$type.val('ppt');
+					recoverInitialVal();
+				}
+				return true;  
+			},
+		});
+	}
+	//恢复初始值
+	function recoverInitialVal(){
+		$isUploadedFile.val('false');
+		$videoMinute.val("");
+		$videoSeconds.val("");
+		$audioMinute.val("");
+		$audioSeconds.val("");
+		$mediaId.val("");
+		$mediaName.val("");
+		$length.val("");
+		//清除背景色
+		$list.each(function(){
+			$(this).css("background-color","#FFFFFF");
+		});
+	}
+	
+	// 表单验证
+	$inputForm.validate({
+		rules: {
+			title: {
+				required: true
+			}
+		},
+		messages: {
+			title: {
+				pattern: "${message("admin.validate.required")}"
+			}
+		}
+	});
+	
+	$btnSubmit.click(function(e){
+		if($isUploadedFile.val() == "false"){
+			$.message("warn","文件未上传或正在上传不能提交");
+			return false;
+		}
+	})
+});
+
+
+
+</script>
+<style>
+iframe{
+	height:50px;
+}
+</style>
+</head>
+<body>
+	<div class="path">
+		<a href="${base}/admin/common/index.jhtml">${message("admin.path.index")}</a> &raquo; 添加课时
+	</div>
+	<form id="inputForm" action="save.jhtml" method="post">
+		<input type="hidden" name="uploadFiles.id" id="mediaId"/>
+		<input type="hidden" name="mediaName" id="mediaName"/>
+		<input type="hidden" name="length" id="length" value="0"/>
+		<input type="hidden" name="course.id" id="courseId" value="${courseId}"/>
+		<input type="hidden" name="courseChapter.id" id="chapterId" value="${chapterId}"/>
+		<input type="hidden" name="mediaSource" id="mediaSource" value="self"/>
+		<input type="hidden" name="type" id="type" value="video"/>
+		<input type="hidden" name="replayStatus" id="replayStatus" value="ungenerated"/>
+		<input type="hidden" name="status" id="status" value="unpublished"/>
+		<input type="hidden" name="isUploadedFile" id="isUploadedFile" value="false"/>
+		
+		<ul id="tab" class="tab">
+			<li>
+				<input type="button" value="视频" />
+			</li>
+			<li>
+				<input type="button" value="音频" />
+			</li>
+			<li>
+				<input type="button" value="图文" />
+			</li>
+			<li>
+				<input type="button" value="PPT" />
+			</li>
+		</ul>
+		
+		<table class="input">
+			<tr>
+				<th>
+					标题:
+				</th>
+				<td>
+						<input type="text" name="title" class="text" style="width:400px;"/>
+						<input type="checkbox" name="free" id="free" value="0" checked="checked"/>免费课时
+				</td>
+			</tr>
+			<tr>
+				<th>
+					摘要:
+				</th>
+				<td>
+						<textarea name="summary" cols="50" class="text" ></textarea>
+				</td>
+			</tr>
+		</table>
+		<table class="input tabContent">
+			<tr>
+				<th>
+					视频:
+				</th>
+				<td>
+					<span style="cursor:pointer;"  class="gray green current" name="containerVideo">上传视频</span>
+					<span style="cursor:pointer;"  class="gray current" name="libraryMedia">从资料库中选择</span>
+					<span style="cursor:pointer;"  class="gray current" name="courseMedia">从课程文件中选择</span>
+					<span style="cursor:pointer;"  class="gray current" name="webMedia">导入网络视频</span>
+					<div>
+						<div id="containerVideo"  >
+							<iframe src="${setting.cloudServerSite}/uploadFiles/toUpload.jhtml?userId=${userId}&userName=[@shiro.principal /]&targetType=courselesson&targetId=${courseId}&fileType=video" frameborder="0"  scrolling="no" id="videoIframe" 
+							></iframe>
+							<div style="background:#d9edf7">
+								
+									支持<strong>mp4, avi, flv, wmv, mov</strong>格式的视频文件上传，文件大小不能超过<strong>1 GB</strong>。<br/>
+									支持<strong>断点续传</strong>（仅支持HTML5浏览器）。<br/>
+									视频将上传到<strong>云视频服务器</strong>，上传之后会对视频进行格式转换，转换过程需要一定的时间，在这个过程中视频将无法播放。
+							</div>
+						</div>
+						
+						<div id="libraryMedia" class="hidden">
+							<table  class="list">
+								[#list courseMaterialFiles as uploadFile]
+									[#if uploadFile.fileType="video"]
+										<tr id="${uploadFile.id}" length="${uploadFile.length}">
+											<td>${uploadFile.filename}</td>
+											<td>${uniConversion.bytes2kb(uploadFile.size)}</td>
+											<td>
+												${uploadFile.createDate?string("yyyy-MM-dd HH:mm:ss")}
+											</td>
+										</tr>
+									[/#if]
+								[/#list]
+							</table>
+						</div>
+						<div id="courseMedia" class="hidden">
+							<table  class="list">
+								[#list courseLessonFiles as uploadFile]
+									[#if uploadFile.fileType="video"]
+										<tr id="${uploadFile.id}" length="${uploadFile.length}">
+											<td>${uploadFile.filename}</td>
+											<td>${uniConversion.bytes2kb(uploadFile.size)}</td>
+											<td>
+												${uploadFile.createDate?string("yyyy-MM-dd HH:mm:ss")}
+											</td>
+										</tr>
+									[/#if]
+								[/#list]
+							</table>
+											
+						</div>
+						<div id="webMedia" class="hidden">网络导入</div>
+					</div>
+					
+				</td>
+			</tr>
+			
+			<tr>
+				<th>
+					视频时长:
+				</th>
+				<td>
+					<input name="videoMinute" id="videoMinute" placeholder="请输入整数" style="width:100px;" />&nbsp;&nbsp;分
+					<input name="videoSeconds" id="videoSeconds" placeholder="请输入整数" style="width:100px;" />&nbsp;&nbsp;秒
+				</td>
+			</tr>
+		</table>
+		<table class="input tabContent">
+			<tr>
+				<th>
+					音频:
+				</th>
+				<td>
+					<span style="cursor:pointer;"  class="gray green current" name="uploadMusic">上传音频</span>
+					<span style="cursor:pointer;"  class="gray current" name="libraryMusic">从资料库中选择</span>
+					<span style="cursor:pointer;"  class="gray current" name="courseMusic">从课程文件中选择</span>
+					
+					<div>
+						<div id="uploadMusic" name="uploadMedia">
+							<div id="container">
+							    <iframe  frameborder="0"  scrolling="no" id="audioIframe" 
+							    ></iframe>
+							</div>
+						
+							<div style="background:#d9edf7">
+								
+									支持	<strong>mp3</strong>格式的音频文件上传，且文件大小不能超过<strong> 500M </strong>。<br/>
+									支持<strong>断点续传</strong>（仅支持HTML5浏览器）。<br/>
+									音频将上传到<strong>云服务器</strong>
+							</div>
+						</div>
+					
+						<div id="libraryMusic" class="hidden" >
+							<table  class="list">
+								[#list courseMaterialFiles as uploadFile]
+									[#if uploadFile.fileType="audio"]
+										<tr id="${uploadFile.id}" length="${uploadFile.length}">
+											<td>${uploadFile.filename}</td>
+											<td>${uniConversion.bytes2kb(uploadFile.size)}</td>
+											<td>
+												${uploadFile.createDate?string("yyyy-MM-dd HH:mm:ss")}
+											</td>
+										</tr>
+									[/#if]
+								[/#list]
+							</table>
+						</div>
+						<div id="courseMusic" class="hidden" >
+							<table  class="list">
+								[#list courseLessonFiles as uploadFile]
+									[#if uploadFile.fileType="audio"]
+										<tr id="${uploadFile.id}" length="${uploadFile.length}">
+											<td>${uploadFile.filename}</td>
+											<td>${uniConversion.bytes2kb(uploadFile.size)}</td>
+											<td>
+												${uploadFile.createDate?string("yyyy-MM-dd HH:mm:ss")}
+											</td>
+										</tr>
+									[/#if]
+								[/#list]
+							</table>
+						</div>
+					</div>
+				</td>
+			</tr>
+		
+			<tr>
+				<th>
+					音频时长:
+				</th>
+				<td>
+					<input name="audioMinute"  id="audioMinute" placeholder="请输入整数" style="width:100px;height:20px" />&nbsp;&nbsp;分
+					<input name="audioSeconds"  id="audioSeconds" placeholder="请输入整数" style="width:100px;height:20px" />&nbsp;&nbsp;秒
+				</td>
+			</tr>
+		</table>
+		<table class="input tabContent">
+			<tr>	
+				<th>图文</th>
+				
+				<td>
+					<textarea id="editor" name="content" style="width:500px;" ></textarea>
+				</td>
+			</tr>
+			
+		</table>
+		<table class="input tabContent">
+			<tr>
+				<th>PPT</th>
+				<td>
+					<span style="cursor:pointer;"  class="gray green current" name="uploadPPT">上传PPT</span>
+					<span style="cursor:pointer;"  class="gray current" name="libraryPPT">从资料库中选择</span>
+					<span style="cursor:pointer;"  class="gray current" name="coursePPT">从课程文件中选择</span>
+					<div>
+						<div id="uploadPPT" name="uploadPPT">
+							<div id="container">
+							    <iframe  frameborder="0"  scrolling="no" id="pptIframe"  ></iframe>
+							</div>
+							<div style="background:#d9edf7">
+								支持<strong>ppt, pptx</strong>格式的PPT文件上传，且文件大小不能超过<strong>100 MB</strong><br/>
+								PPT将上传到<strong>云服务器</strong>
+							</div>
+						</div>
+						
+						<div id="libraryPPT" class="hidden">
+							<table  class="list">
+								[#list courseMaterialFiles as uploadFile]
+									[#if uploadFile.fileType="ppt"]
+										<tr id="${uploadFile.id}" length="${uploadFile.length}">
+											<td>${uploadFile.filename}</td>
+											<td>${uniConversion.bytes2kb(uploadFile.size)}</td>
+											<td>
+												${uploadFile.createDate?string("yyyy-MM-dd HH:mm:ss")}
+											</td>
+										</tr>
+									[/#if]
+								[/#list]
+							</table>
+						</div>
+						<div id="coursePPT" class="hidden" >
+							<table  class="list">
+								[#list courseLessonFiles as uploadFile]
+									[#if uploadFile.fileType="ppt"]
+										<tr id="${uploadFile.id}" length="${uploadFile.length}">
+											<td>${uploadFile.filename}</td>
+											<td>${uniConversion.bytes2kb(uploadFile.size)}</td>
+											<td>
+												${uploadFile.createDate?string("yyyy-MM-dd HH:mm:ss")}
+											</td>
+										</tr>
+									[/#if]
+								[/#list]
+							</table>
+						</div>
+					
+					</div>
+				</td>
+			</tr>
+			
+		</table>
+		<table class="input">
+			<tr>
+				<th>
+					&nbsp;
+				</th>
+				<td>
+					<input type="submit" class="button" value="${message("admin.common.submit")}" id="btnSubmit" />
+					<input type="button" class="button" value="${message("admin.common.back")}" onclick="location.href='${base}/admin/course_chapter/list.jhtml?courseId=${courseId}'" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
